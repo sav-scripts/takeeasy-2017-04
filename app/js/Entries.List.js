@@ -61,8 +61,6 @@
             {
                 if(_isLocking) return;
 
-                ga("send", "event", "artworks", "click", "search_name");
-
                 _keyword = $doms.keywordInput.val();
                 //$doms.keywordInput.val('');
                 self.doSearch(0, true);
@@ -72,8 +70,6 @@
             $doms.btnSearchSerial = $doms.container.find(".btn-serial").on("click", function()
             {
                 if(_isLocking) return;
-
-                ga("send", "event", "artworks", "click", "search_serial");
 
                 //_keyword = $doms.keywordInput.val();
                 _keyword = parseInt($doms.keywordInput.val());
@@ -86,16 +82,12 @@
             {
                 if(_isLocking) return;
 
-                ga("send", "event", "artworks", "click", "sort_by_date");
-
                 self.changeSortType("date");
             });
 
             $doms.btnSortByRank = $doms.container.find(".tab-by-rank").on("click", function()
             {
                 if(_isLocking) return;
-
-                ga("send", "event", "artworks", "click", "sort_by_votes");
 
                 self.changeSortType("votes");
             });
@@ -106,6 +98,8 @@
         {
             if (!_isHiding) return;
             _isHiding = false;
+
+            Entries.Title.show();
 
             $doms.parent.append($doms.container);
 
@@ -134,6 +128,8 @@
         {
             if (_isHiding) return;
             _isHiding = true;
+
+            Entries.Title.hide();
 
             var tl = new TimelineMax;
             tl.to($doms.container, .4, {autoAlpha: 0}, delay);

@@ -6,6 +6,8 @@
 @pc-width: 1200px;
 @pc-height: 700px;
 
+@cover-color: #fcf46a;
+
 
 html {
     padding: 0;
@@ -320,6 +322,7 @@ div{
 
 }
 
+/* participate popups */
 #participate-success{
     position: absolute;
     width: 100%;
@@ -368,6 +371,54 @@ div{
     }
 }
 
+#participate-share-success{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    z-index: 2000;
+
+    .cover{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #fce7b1;
+        opacity: .75;
+    }
+
+    .content{
+
+        position: absolute;
+        left:50%;
+        top:50%;
+        width: 474px;
+        height: 261px;
+        .image-bg("participate-share-success.png");
+        margin-left: -237px;
+        margin-top: -130px;
+
+        .btn-close{
+            .abs-div(436, 10, 28, 28);
+            .image-bg("common-btn-close.png");
+
+            cursor: pointer;
+            &:active{
+                margin-top: 2px;
+            }
+        }
+
+        .btn-to-fill{
+            .abs-div(176,172,119,27);
+            .image-bg("participate-btn-to-fill.png");
+
+            cursor: pointer;
+            &:active{
+                //                margin-top: 2px;
+            }
+        }
+    }
+}
+
 
 /** entry-view **/
 #entry-view{
@@ -380,7 +431,7 @@ div{
         position: absolute;
         width: 100%;
         height: 100%;
-        background-color: #fce7b1;
+        background-color: @cover-color;
         opacity: .75;
     }
 
@@ -525,13 +576,27 @@ div{
 /** common form **/
 #common-form{
     .container-pc();
-    .layout-pc("participate-step-form-pc.jpg");
+//    .layout-pc("participate-step-form-pc.jpg");
+//    .layout-pc("vote-step-form-pc.jpg");
+    .layout-pc("fill-step-form-pc.jpg");
 
-    //    .percent-div(title, -342, -323, 715, 157, "participate-upload-title.png");
-    //    .percent-div(title-girl, 191, -242, 115, 75, "participate-upload-title-girl.png");
-    //    .percent-div(left-girl, -447, -228, 117, 142, "participate-upload-left-girl.png");
 
-    .percent-div(desc, -349, -285, 696, 157, "participate-form-desc.png");
+
+    .desc{
+        &.participate{
+            .percent-div(none, -349, -285, 696, 157, "participate-form-desc.png");
+        }
+
+        &.vote{
+            .percent-div(none, -387, -260, 770, 121, "vote-form-desc.png");
+        }
+
+        &.fill{
+            .percent-div(none, -349, -285, 696, 157, "fill-form-desc.png");
+        }
+    }
+
+
     .percent-div(btn-send, -84, 207, 161, 57, "common-form-btn-send.png");
 
     .percent-div(char-1, -593, 13, 262, 345, 'common-form-char-1.png');
@@ -657,17 +722,17 @@ div{
 #entries{
 
     .container-pc();
-    .layout-pc("layouts/entries-pc.jpg");
+    .layout-pc("entries-list-pc.jpg");
 
     .content-title {
 
         .content-wrapper();
 
-        .percent-div(title, -250, -339, 471, 157, "entries-title.png");
-        .percent-div(hand, -275, -277, 122, 101, "entries-title-hand.png");
+        .percent-div(text-1, -207, -294, 417, 69, "entries-text-1.png");
+        .percent-div(text-2, -230, -220, 478, 28, "entries-text-2.png");
 
-        .percent-div(mob, -367, -305, 161, 117, "entries-title-mob.png");
-        .percent-div(boy, 199, -329, 135, 129, "entries-title-boy.png");
+        .percent-div(char-1, -331, -336, 114, 158, "entries-char-1.png");
+        .percent-div(char-2, 262, -326, 221, 150, "entries-char-2.png");
 
     }
 
@@ -675,7 +740,8 @@ div{
 
         .content-wrapper();
 
-        .percent-div(sub-title, -136, -179, 322, 19, "entries-sub-title.png");
+        left: 5px;
+        top: 6px;
 
         .tab-by-date{
             .abs-div(-509,-186,173,34,"entries-button-tab-by-date.png");
@@ -889,13 +955,8 @@ div{
 
         .search-bar{
 
-            .abs-div(202,-196,297,34);
+            .abs-div(202,-191,297,34);
             .image-bg("entries-search-bar.png");
-
-            .girl{
-                .abs-div(197,-69,115,75);
-                .image-bg("index-hand-girl.png");
-            }
 
             .btn-name{
                 .abs-div(128,0,84,33);
@@ -949,6 +1010,56 @@ div{
     }
 }
 
+
+/* entries-vote-success */
+#entries-vote-success{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    z-index: 2000;
+
+    .cover{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #fce7b1;
+        opacity: .75;
+    }
+
+    .content{
+
+        position: absolute;
+        left:50%;
+        top:50%;
+        width: 474px;
+        height: 261px;
+        .image-bg("vote-success.png");
+        margin-left: -237px;
+        margin-top: -130px;
+
+        .btn-close{
+            .abs-div(436, 10, 28, 28);
+            .image-bg("common-btn-close.png");
+
+            cursor: pointer;
+            &:active{
+                margin-top: 2px;
+            }
+        }
+
+        .btn-share{
+            .abs-div(162,212,162,24);
+            .image-bg("common-btn-facebook-share.png");
+
+            cursor: pointer;
+            &:active{
+                //                margin-top: 2px;
+            }
+        }
+    }
+}
+
 /** entry-view **/
 #entry-view{
 
@@ -960,7 +1071,7 @@ div{
         position: absolute;
         width: 100%;
         height: 100%;
-        background-color: #fce7b1;
+        background-color: @cover-color;
         opacity: .75;
     }
 
@@ -1086,11 +1197,11 @@ div{
         }
 
         .btn-to-list{
-            .abs-div(265,150,104,109,'entry-view-btn-to-list.png');
+            .abs-div(230,230,119,27,'entry-view-btn-to-list.png');
         }
 
         .btn-vote{
-            .abs-div(379,150,106,113,'entry-view-btn-vote.png');
+            .abs-div(359,230,119,27,'entry-view-btn-vote.png');
         }
 
         .btn-to-list, .btn-vote{

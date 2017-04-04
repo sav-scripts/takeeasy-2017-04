@@ -18,6 +18,8 @@
             $doms.parent = $("#scene-container");
             $doms.container = $('#common-form');
 
+            $doms.desc = $doms.container.find('.desc');
+
             $doms.eulaContentContainer = $doms.container.find(".content-container");
 
             _ss = new SimpleScroller($doms.eulaContentContainer[0], null, 0, Modernizr.touchevents).update(true);
@@ -82,6 +84,12 @@
         setMode: function(mode)
         {
             _currentMode = mode;
+
+            $doms.desc.toggleClass('participate', false);
+            $doms.desc.toggleClass('vote', false);
+            $doms.desc.toggleClass('fill', false);
+
+            $doms.desc.toggleClass(mode, true);
 
             if(mode == 'participate')
             {

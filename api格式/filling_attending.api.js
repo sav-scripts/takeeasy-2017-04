@@ -9,7 +9,8 @@ var send =
 {
     "name": "John Tester", // 使用者真實姓名
     "phone": "0987654321", // 使用者手機
-    "email": "someone@some.where", // 使用者email
+    "email": "someone@some.where", // 使用者email,
+    "contents": "使用者填的文字",
 
     "fb_uid": "231356646542", // facebook uid
     "fb_token": "asdf89f79asfsdf678asf0sadfasf", // facebook access token

@@ -73,6 +73,7 @@
 
         self.UploadStep.init($doms.container.find(".content-step-upload"));
         self.Success.init($("#participate-success"));
+        self.ShareSuccess.init($("#participate-share-success"));
 
 
         $doms.container.detach();
@@ -84,26 +85,14 @@
 
         self.resize();
 
-
-
         _currentStep = 'upload';
 
         _stepDic[_currentStep].show(0, cb);
-
-        //var tl = new TimelineMax;
-        //tl.set($doms.container, {autoAlpha: 0});
-        //tl.to($doms.container, .4, {autoAlpha: 1});
-        //tl.add(function ()
-        //{
-        //    cb.apply();
-        //});
     }
 
     function hide(cb)
     {
-        var tl = new TimelineMax;
-        tl.to($doms.container, .4, {autoAlpha: 0});
-        tl.add(function ()
+        _stepDic[_currentStep].hide(0, function()
         {
             $doms.container.detach();
             cb.apply();

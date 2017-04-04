@@ -47,6 +47,21 @@
         $("#invisible-container").append(templates[0].dom);
         $doms.container = $("#index");
 
+        $doms.btnParticipate = $doms.container.find(".button-1").on(_CLICK_, function()
+        {
+            Main.loginFB("/Participate", function()
+            {
+                SceneHandler.toHash("/Participate");
+            });
+        });
+
+        $doms.btnVote = $doms.container.find(".button-3").on(_CLICK_, function()
+        {
+            //Main.loginFB("/Entries", function()
+            //{
+                SceneHandler.toHash("/Entries");
+            //});
+        });
 
         $doms.container.detach();
     }

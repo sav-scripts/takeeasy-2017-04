@@ -659,6 +659,7 @@ div.disactivated {
 #participate .image-input {
   visibility: hidden;
 }
+/* participate popups */
 #participate-success {
   position: absolute;
   width: 100%;
@@ -710,6 +711,57 @@ div.disactivated {
   background-size: auto;
   cursor: pointer;
 }
+#participate-share-success {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2000;
+}
+#participate-share-success .cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #fce7b1;
+  opacity: .75;
+}
+#participate-share-success .content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 474px;
+  height: 261px;
+  background-image: url("../images/participate-share-success.png");
+  background-size: auto;
+  margin-left: -237px;
+  margin-top: -130px;
+}
+#participate-share-success .content .btn-close {
+  position: absolute;
+  left: 436px;
+  top: 10px;
+  width: 28px;
+  height: 28px;
+  margin-left: 0px;
+  margin-top: 0px;
+  background-image: url("../images/common-btn-close.png");
+  background-size: auto;
+  cursor: pointer;
+}
+#participate-share-success .content .btn-close:active {
+  margin-top: 2px;
+}
+#participate-share-success .content .btn-to-fill {
+  position: absolute;
+  left: 176px;
+  top: 172px;
+  width: 119px;
+  height: 27px;
+  margin-left: 0px;
+  margin-top: 0px;
+  background-image: url("../images/participate-btn-to-fill.png");
+  background-size: auto;
+  cursor: pointer;
+}
 /** entry-view **/
 #entry-view {
   position: absolute;
@@ -720,7 +772,7 @@ div.disactivated {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #fce7b1;
+  background-color: #fcf46a;
   opacity: .75;
 }
 #entry-view .wrapper {
@@ -929,17 +981,35 @@ div.disactivated {
   top: -350%;
   width: 1200%;
   height: 700%;
-  background-image: url("../images/layouts/participate-step-form-pc.jpg");
+  background-image: url("../images/layouts/fill-step-form-pc.jpg");
   background-size: cover;
   opacity: 0.4;
 }
-#common-form .desc {
+#common-form .desc.participate {
   position: absolute;
   left: -349%;
   top: -285%;
   width: 696%;
   height: 157%;
   background-image: url("../images/participate-form-desc.png");
+  background-size: cover;
+}
+#common-form .desc.vote {
+  position: absolute;
+  left: -387%;
+  top: -260%;
+  width: 770%;
+  height: 121%;
+  background-image: url("../images/vote-form-desc.png");
+  background-size: cover;
+}
+#common-form .desc.fill {
+  position: absolute;
+  left: -349%;
+  top: -285%;
+  width: 696%;
+  height: 157%;
+  background-image: url("../images/fill-form-desc.png");
   background-size: cover;
 }
 #common-form .btn-send {
@@ -1089,7 +1159,7 @@ div.disactivated {
   top: -350%;
   width: 1200%;
   height: 700%;
-  background-image: url("../images/layouts/layouts/entries-pc.jpg");
+  background-image: url("../images/layouts/entries-list-pc.jpg");
   background-size: cover;
   opacity: 0.4;
 }
@@ -1098,55 +1168,48 @@ div.disactivated {
   width: 100%;
   height: 100%;
 }
-#entries .content-title .title {
+#entries .content-title .text-1 {
   position: absolute;
-  left: -250%;
-  top: -339%;
-  width: 471%;
-  height: 157%;
-  background-image: url("../images/entries-title.png");
+  left: -207%;
+  top: -294%;
+  width: 417%;
+  height: 69%;
+  background-image: url("../images/entries-text-1.png");
   background-size: cover;
 }
-#entries .content-title .hand {
+#entries .content-title .text-2 {
   position: absolute;
-  left: -275%;
-  top: -277%;
-  width: 122%;
-  height: 101%;
-  background-image: url("../images/entries-title-hand.png");
+  left: -230%;
+  top: -220%;
+  width: 478%;
+  height: 28%;
+  background-image: url("../images/entries-text-2.png");
   background-size: cover;
 }
-#entries .content-title .mob {
+#entries .content-title .char-1 {
   position: absolute;
-  left: -367%;
-  top: -305%;
-  width: 161%;
-  height: 117%;
-  background-image: url("../images/entries-title-mob.png");
+  left: -331%;
+  top: -336%;
+  width: 114%;
+  height: 158%;
+  background-image: url("../images/entries-char-1.png");
   background-size: cover;
 }
-#entries .content-title .boy {
+#entries .content-title .char-2 {
   position: absolute;
-  left: 199%;
-  top: -329%;
-  width: 135%;
-  height: 129%;
-  background-image: url("../images/entries-title-boy.png");
+  left: 262%;
+  top: -326%;
+  width: 221%;
+  height: 150%;
+  background-image: url("../images/entries-char-2.png");
   background-size: cover;
 }
 #entries .content-list {
   position: absolute;
   width: 100%;
   height: 100%;
-}
-#entries .content-list .sub-title {
-  position: absolute;
-  left: -136%;
-  top: -179%;
-  width: 322%;
-  height: 19%;
-  background-image: url("../images/entries-sub-title.png");
-  background-size: cover;
+  left: 5px;
+  top: 6px;
 }
 #entries .content-list .tab-by-date {
   position: absolute;
@@ -1363,23 +1426,12 @@ div.disactivated {
 #entries .content-list .search-bar {
   position: absolute;
   left: 202px;
-  top: -196px;
+  top: -191px;
   width: 297px;
   height: 34px;
   margin-left: 0px;
   margin-top: 0px;
   background-image: url("../images/entries-search-bar.png");
-  background-size: auto;
-}
-#entries .content-list .search-bar .girl {
-  position: absolute;
-  left: 197px;
-  top: -69px;
-  width: 115px;
-  height: 75px;
-  margin-left: 0px;
-  margin-top: 0px;
-  background-image: url("../images/index-hand-girl.png");
   background-size: auto;
 }
 #entries .content-list .search-bar .btn-name {
@@ -1429,6 +1481,58 @@ div.disactivated {
   font-size: 14px;
   color: #000;
 }
+/* entries-vote-success */
+#entries-vote-success {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2000;
+}
+#entries-vote-success .cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #fce7b1;
+  opacity: .75;
+}
+#entries-vote-success .content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 474px;
+  height: 261px;
+  background-image: url("../images/vote-success.png");
+  background-size: auto;
+  margin-left: -237px;
+  margin-top: -130px;
+}
+#entries-vote-success .content .btn-close {
+  position: absolute;
+  left: 436px;
+  top: 10px;
+  width: 28px;
+  height: 28px;
+  margin-left: 0px;
+  margin-top: 0px;
+  background-image: url("../images/common-btn-close.png");
+  background-size: auto;
+  cursor: pointer;
+}
+#entries-vote-success .content .btn-close:active {
+  margin-top: 2px;
+}
+#entries-vote-success .content .btn-share {
+  position: absolute;
+  left: 162px;
+  top: 212px;
+  width: 162px;
+  height: 24px;
+  margin-left: 0px;
+  margin-top: 0px;
+  background-image: url("../images/common-btn-facebook-share.png");
+  background-size: auto;
+  cursor: pointer;
+}
 /** entry-view **/
 #entry-view {
   position: absolute;
@@ -1439,7 +1543,7 @@ div.disactivated {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #fce7b1;
+  background-color: #fcf46a;
   opacity: .75;
 }
 #entry-view .wrapper {
@@ -1606,10 +1710,10 @@ div.disactivated {
 }
 #entry-view .wrapper .btn-to-list {
   position: absolute;
-  left: 265px;
-  top: 150px;
-  width: 104px;
-  height: 109px;
+  left: 230px;
+  top: 230px;
+  width: 119px;
+  height: 27px;
   margin-left: 0px;
   margin-top: 0px;
   background-image: url("../images/entry-view-btn-to-list.png");
@@ -1617,10 +1721,10 @@ div.disactivated {
 }
 #entry-view .wrapper .btn-vote {
   position: absolute;
-  left: 379px;
-  top: 150px;
-  width: 106px;
-  height: 113px;
+  left: 359px;
+  top: 230px;
+  width: 119px;
+  height: 27px;
   margin-left: 0px;
   margin-top: 0px;
   background-image: url("../images/entry-view-btn-vote.png");
