@@ -40,8 +40,10 @@
             [
                 "/Index",
                 "/Reviewer",
+                "/Rule",
                 "/Participate",
-                "/Entries"
+                "/Entries",
+                "/Fill"
             ],
 
         firstHash: '',
@@ -61,10 +63,12 @@
             ScalableContent.enableFixFullImage = true;
             ScalableContent.enableDrawBounds = true;
 
+            self.settings.isLineBrowser = Boolean(navigator.userAgent.match('Line'));
 
             self.settings.isiOS = Utility.isiOS();
             window._CLICK_ = (self.settings.isiOS)? "touchend": "click";
 
+            Menu.init();
             CommonForm.init();
             EntryView.init();
 
@@ -89,15 +93,95 @@
 
                     cbBeforeChange: function()
                     {
+                        Menu.close();
+                    },
+
+                    hashChangeTester: function(hashName)
+                    {
+                        if(hashName == '/Participate')
+                        {
+                            if(self.settings.isLineBrowser)
+                            {
+                                alert('您的瀏覽器不支援上傳檔案, 請使用其他的瀏覽器瀏覽此單元');
+                                hashName = null; // cancel content change
+                                SceneHandler.setHash('/Index');
+
+                                return null;
+                            }
+                        }
+
+                        if(hashName == '/Participate' || hashName == '/Fill')
+                        {
+                            if(!Main.settings.fbToken)
+                            {
+                                //console.log("no token");
+                                hashName = null; // cancel content change
+                                SceneHandler.setHash('/Index');
+
+                                return null;
+                            }
+                        }
+
+                        if(hashName == '/Participate' || hashName == '/Fill')
+                        {
+                            if(!Modernizr.canvas)
+                            {
+                                alert('您的瀏覽器不支援 html5 canvas, 請使用其他的瀏覽器瀏覽此單元');
+
+                                hashName = null; // cancel content change
+                                SceneHandler.setHash('/Index');
+
+                                return null;
+                            }
+                        }
+
+
+                        return hashName;
                     }
                 });
 
-                SceneHandler.toFirstHash();
+
+
+                if(Utility.urlParams.serial)
+                {
+                    getFirstEntry();
+                }
+                else
+                {
+                    SceneHandler.toFirstHash();
+                }
             }
+        },
+
+        testCanvas: function(canvas)
+        {
+            $(canvas).css(
+                {
+                    "position": 'fixed',
+                    "top": 0,
+                    "left": 0
+                }
+            );
+
+            $("body").append(canvas);
         },
 
         loginFB: loginFB
     };
+
+
+    function getFirstEntry()
+    {
+        if(history && history.replaceState)
+        {
+            var hash = SceneHandler.getHash();
+            var uri = Helper.removeURLParameter(location.href, 'serial') + "#" + hash;
+            window.history.replaceState({path:uri},'',uri);
+        }
+
+        Entries.firstEntrySerial = Utility.urlParams.serial;
+        SceneHandler.toHash('/Entries');
+    }
 
     function checkAccessToken()
     {
@@ -112,8 +196,26 @@
                 var state = Helper.getParameterByName("state", string);
                 window.location.hash = "#" + state;
 
-                //removeFBParams();
+                removeFBParams();
             }
+        }
+    }
+
+    function removeFBParams()
+    {
+        if(history && history.replaceState)
+        {
+            var hash = Main.settings.fbState;
+            var uri = Helper.removeURLParameter(location.href, 'code');
+            uri = Helper.removeURLParameter(uri, 'state');
+
+            var currentHash = SceneHandler.getHash();
+
+            uri = uri.replace('?#' + currentHash, '').replace('#' + currentHash, '');
+
+            uri += "#" + hash;
+
+            window.history.replaceState({path: uri}, '', uri);
         }
     }
 

@@ -2,9 +2,9 @@
 {
     var $doms = {},
         _isHiding = true,
-        _shareEntrySerial = null;
+        _shareImageUrl;
 
-    var self = window.Participate.Success =
+    var self = window.Fill.Success =
     {
         init: function ($container)
         {
@@ -20,25 +20,34 @@
 
             $doms.btnShare = $doms.container.find(".btn-share").on("click", function()
             {
+                //self.hide();
+
                 FB.ui
                 (
                     {
                         method:"feed",
                         display: "iframe",
-                        link: Utility.getPath() + "?serial=" + _shareEntrySerial
+                        link: Utility.getPath(),
+                        picture: _shareImageUrl + "?v=" + new Date().getTime(),
+                        title: "輕鬆小品 全台輕鬆練肖畫募集大賽！",
+                        description: '為紓解大眾生活壓力、促進國民身心健康、培養輕鬆幽默的處世態度，輕鬆小品邀你一起輕鬆練肖畫/話、輕鬆拿獎金，還有機會登上包裝供全民欣賞喔～'
                     },function(response)
                     {
                         if(response && response.post_id)
                         {
                             self.hide();
-                            Participate.ShareSuccess.show();
+                            Fill.ShareSuccess.show();
                         }
                     }
                 );
-
             });
 
             $doms.container.detach();
+        },
+
+        setShareImageUrl: function(url)
+        {
+            _shareImageUrl = url;
         },
 
         show: function (delay, cb)
@@ -75,23 +84,18 @@
                 if (cb) cb.apply();
             });
 
-        },
-
-        setShareEntrySerial: function(serial)
-        {
-            _shareEntrySerial = serial;
         }
     };
 
 }());
 
+
 (function ()
 {
     var $doms = {},
-        _isHiding = true,
-        _shareEntrySerial = null;
+        _isHiding = true;
 
-    var self = window.Participate.ShareSuccess =
+    var self = window.Fill.ShareSuccess =
     {
         init: function ($container)
         {
@@ -108,7 +112,7 @@
             $doms.btnToNext = $doms.container.find(".btn-to-next").on("click", function()
             {
                 self.hide();
-                SceneHandler.toHash("/Fill");
+                SceneHandler.toHash("/Participate");
             });
 
             $doms.container.detach();
@@ -148,11 +152,6 @@
                 if (cb) cb.apply();
             });
 
-        },
-
-        setShareEntrySerial: function(serial)
-        {
-            _shareEntrySerial = serial;
         }
     };
 

@@ -139,6 +139,7 @@
     function trySend()
     {
         var formObj = checkForm();
+        //var formObj = {};
 
         if(formObj)
         {
@@ -219,6 +220,9 @@
                     imageData = canvas.toDataURL("image/jpeg", .95).replace(/^data:image\/jpeg;base64,/, "");
 
                     formObj.image_data = imageData;
+
+                    formObj.contents = Fill.getDescription();
+                    formObj.illust_index = Fill.getIllustIndex();
 
                     Loading.progress('資料傳輸中 ... 請稍候').show();
 

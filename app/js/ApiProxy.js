@@ -89,8 +89,8 @@
         }
     };
 
-    var _apiExtension = ".php",
-        _apiPath = "../api/";
+    var _apiExtension = "",
+        _apiPath = "../process/";
 
     window.ApiProxy =
     {
