@@ -267,7 +267,7 @@ div.disactivated {
   height: 41px;
   background-image: url("../images/menu-buttons.png");
   background-size: auto;
-  background-position: 0px -320px;
+  background-position: 0px -280px;
 }
 #menu .button-container .btn:nth-child(8) .hover-state {
   position: absolute;
@@ -277,7 +277,7 @@ div.disactivated {
   height: 41px;
   background-image: url("../images/menu-buttons.png");
   background-size: auto;
-  background-position: -136px -320px;
+  background-position: -136px -280px;
   opacity: 0;
   transition: opacity 0.4s ease-out;
 }
@@ -311,7 +311,7 @@ div.disactivated {
   height: 41px;
   background-image: url("../images/menu-buttons.png");
   background-size: auto;
-  background-position: 0px -280px;
+  background-position: 0px -240px;
 }
 #menu .button-container .btn:nth-child(7) .hover-state {
   position: absolute;
@@ -321,7 +321,7 @@ div.disactivated {
   height: 41px;
   background-image: url("../images/menu-buttons.png");
   background-size: auto;
-  background-position: -136px -280px;
+  background-position: -136px -240px;
   opacity: 0;
   transition: opacity 0.4s ease-out;
 }
@@ -355,7 +355,7 @@ div.disactivated {
   height: 41px;
   background-image: url("../images/menu-buttons.png");
   background-size: auto;
-  background-position: 0px -240px;
+  background-position: 0px -200px;
 }
 #menu .button-container .btn:nth-child(6) .hover-state {
   position: absolute;
@@ -365,7 +365,7 @@ div.disactivated {
   height: 41px;
   background-image: url("../images/menu-buttons.png");
   background-size: auto;
-  background-position: -136px -240px;
+  background-position: -136px -200px;
   opacity: 0;
   transition: opacity 0.4s ease-out;
 }
@@ -399,7 +399,7 @@ div.disactivated {
   height: 41px;
   background-image: url("../images/menu-buttons.png");
   background-size: auto;
-  background-position: 0px -200px;
+  background-position: 0px -160px;
 }
 #menu .button-container .btn:nth-child(5) .hover-state {
   position: absolute;
@@ -409,7 +409,7 @@ div.disactivated {
   height: 41px;
   background-image: url("../images/menu-buttons.png");
   background-size: auto;
-  background-position: -136px -200px;
+  background-position: -136px -160px;
   opacity: 0;
   transition: opacity 0.4s ease-out;
 }
@@ -443,7 +443,7 @@ div.disactivated {
   height: 41px;
   background-image: url("../images/menu-buttons.png");
   background-size: auto;
-  background-position: 0px -160px;
+  background-position: 0px -120px;
 }
 #menu .button-container .btn:nth-child(4) .hover-state {
   position: absolute;
@@ -453,7 +453,7 @@ div.disactivated {
   height: 41px;
   background-image: url("../images/menu-buttons.png");
   background-size: auto;
-  background-position: -136px -160px;
+  background-position: -136px -120px;
   opacity: 0;
   transition: opacity 0.4s ease-out;
 }
@@ -487,7 +487,7 @@ div.disactivated {
   height: 41px;
   background-image: url("../images/menu-buttons.png");
   background-size: auto;
-  background-position: 0px -120px;
+  background-position: 0px -80px;
 }
 #menu .button-container .btn:nth-child(3) .hover-state {
   position: absolute;
@@ -497,7 +497,7 @@ div.disactivated {
   height: 41px;
   background-image: url("../images/menu-buttons.png");
   background-size: auto;
-  background-position: -136px -120px;
+  background-position: -136px -80px;
   opacity: 0;
   transition: opacity 0.4s ease-out;
 }
@@ -531,7 +531,7 @@ div.disactivated {
   height: 41px;
   background-image: url("../images/menu-buttons.png");
   background-size: auto;
-  background-position: 0px -80px;
+  background-position: 0px -40px;
 }
 #menu .button-container .btn:nth-child(2) .hover-state {
   position: absolute;
@@ -541,7 +541,7 @@ div.disactivated {
   height: 41px;
   background-image: url("../images/menu-buttons.png");
   background-size: auto;
-  background-position: -136px -80px;
+  background-position: -136px -40px;
   opacity: 0;
   transition: opacity 0.4s ease-out;
 }
@@ -575,7 +575,7 @@ div.disactivated {
   height: 41px;
   background-image: url("../images/menu-buttons.png");
   background-size: auto;
-  background-position: 0px -40px;
+  background-position: 0px 0px;
 }
 #menu .button-container .btn:nth-child(1) .hover-state {
   position: absolute;
@@ -585,7 +585,7 @@ div.disactivated {
   height: 41px;
   background-image: url("../images/menu-buttons.png");
   background-size: auto;
-  background-position: -136px -40px;
+  background-position: -136px 0px;
   opacity: 0;
   transition: opacity 0.4s ease-out;
 }
@@ -1143,211 +1143,6 @@ div.disactivated {
   background-image: url("../images/participate-btn-to-fill.png");
   background-size: auto;
   cursor: pointer;
-}
-/** entry-view **/
-#entry-view {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-#entry-view .cover {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #fcf46a;
-  opacity: .75;
-}
-#entry-view .wrapper {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 100px;
-  height: 100px;
-}
-#entry-view .wrapper .layout {
-  position: absolute;
-  left: -600%;
-  top: -350%;
-  width: 1200%;
-  height: 700%;
-  background-image: url("../images/layouts/layouts/entry-view-pc.jpg");
-  background-size: cover;
-  opacity: 0.4;
-}
-#entry-view .wrapper .basement {
-  position: absolute;
-  left: -531px;
-  top: -180px;
-  width: 1056px;
-  height: 462px;
-  margin-left: 0px;
-  margin-top: 0px;
-  background: white;
-  border: 1px solid black;
-}
-#entry-view .wrapper .btn-close {
-  position: absolute;
-  left: 487px;
-  top: -170px;
-  width: 28px;
-  height: 28px;
-  margin-left: 0px;
-  margin-top: 0px;
-  background-image: url("../images/common-btn-close.png");
-  background-size: auto;
-  cursor: pointer;
-}
-#entry-view .wrapper .btn-close:active {
-  margin-top: 2px;
-}
-#entry-view .wrapper .arrow-left {
-  position: absolute;
-  left: -550px;
-  top: 30px;
-  width: 38px;
-  height: 38px;
-  margin-left: 0px;
-  margin-top: 0px;
-  background-image: url("../images/entry-view-arrow-left.png");
-  background-size: auto;
-  cursor: pointer;
-}
-#entry-view .wrapper .arrow-left:active {
-  margin-left: -3px;
-}
-#entry-view .wrapper .arrow-right {
-  position: absolute;
-  left: 506px;
-  top: 30px;
-  width: 38px;
-  height: 38px;
-  margin-left: 0px;
-  margin-top: 0px;
-  background-image: url("../images/entry-view-arrow-right.png");
-  background-size: auto;
-  cursor: pointer;
-}
-#entry-view .wrapper .arrow-right:active {
-  margin-left: 3px;
-}
-#entry-view .wrapper .optional-fields {
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-#entry-view .wrapper .optional-fields .texts-1 {
-  position: absolute;
-  left: 49px;
-  top: -126px;
-  width: 78px;
-  height: 80px;
-  margin-left: 0px;
-  margin-top: 0px;
-  background-image: url("../images/entry-view-texts.png");
-  background-size: auto;
-  background-position: left top;
-}
-#entry-view .wrapper .optional-fields .field-num-votes {
-  font-family: '微軟正黑體', "Heiti TC", serif;
-  font-size: 30px;
-  color: red;
-  position: absolute;
-  left: 142px;
-  top: -134px;
-  width: 300px;
-  height: 30px;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-#entry-view .wrapper .optional-fields .field-serial {
-  font-family: '微軟正黑體', "Heiti TC", serif;
-  font-size: 17px;
-  color: black;
-  position: absolute;
-  left: 97px;
-  top: -88px;
-  width: 300px;
-  height: 30px;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-#entry-view .wrapper .optional-fields .field-author {
-  font-family: '微軟正黑體', "Heiti TC", serif;
-  font-size: 17px;
-  color: black;
-  position: absolute;
-  left: 97px;
-  top: -66px;
-  width: 300px;
-  height: 30px;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-#entry-view .wrapper .texts-2 {
-  position: absolute;
-  left: 49px;
-  top: -46px;
-  width: 78px;
-  height: 21px;
-  margin-left: 0px;
-  margin-top: 0px;
-  background-image: url("../images/entry-view-texts.png");
-  background-size: auto;
-  background-position: left bottom;
-}
-#entry-view .wrapper .field-description {
-  font-family: '微軟正黑體', "Heiti TC", serif;
-  font-size: 17px;
-  color: black;
-  position: absolute;
-  left: 48px;
-  top: -23px;
-  width: 430px;
-  height: 252px;
-  letter-spacing: 1px;
-  line-height: 23px;
-  word-break: break-all;
-}
-#entry-view .wrapper .image-preview {
-  position: absolute;
-  left: -478px;
-  top: -127px;
-  width: 474px;
-  height: 356px;
-  margin-left: 0px;
-  margin-top: 0px;
-  background: white;
-  border: 1px solid black;
-}
-#entry-view .wrapper .btn-to-list {
-  position: absolute;
-  left: 265px;
-  top: 150px;
-  width: 104px;
-  height: 109px;
-  margin-left: 0px;
-  margin-top: 0px;
-  background-image: url("../images/entry-view-btn-to-list.png");
-  background-size: auto;
-}
-#entry-view .wrapper .btn-vote {
-  position: absolute;
-  left: 379px;
-  top: 150px;
-  width: 106px;
-  height: 113px;
-  margin-left: 0px;
-  margin-top: 0px;
-  background-image: url("../images/entry-view-btn-vote.png");
-  background-size: auto;
-}
-#entry-view .wrapper .btn-to-list,
-#entry-view .wrapper .btn-vote {
-  cursor: pointer;
-}
-#entry-view .wrapper .btn-to-list:active,
-#entry-view .wrapper .btn-vote:active {
-  margin-top: 2px;
 }
 /** common form **/
 #common-form {
@@ -2772,4 +2567,1072 @@ div.disactivated {
   margin-left: 0;
   margin-top: 0;
   background-color: transparent;
+}
+@media (max-width: 640px) {
+  body {
+    min-width: inherit;
+    min-height: inherit;
+  }
+  #scene-container {
+    height: 100%;
+    min-height: 950px;
+    width: 640px;
+    background-image: url("../images/main-background.m.jpg");
+    background-size: cover;
+  }
+  /** common **/
+  /* menu and statement */
+  #menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 9px;
+    background-color: #996b37;
+  }
+  #menu .icon {
+    position: absolute;
+    top: 24px;
+    right: 21px;
+    width: 45px;
+    height: 45px;
+    background-image: url("../images/menu-icon.png");
+    background-size: auto;
+    cursor: pointer;
+  }
+  #menu .icon:active {
+    background-position: 0 1px;
+  }
+  #menu .button-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: auto;
+    overflow: hidden;
+    transition: width 0.3s ease-out;
+  }
+  #menu .button-container.open-mode {
+    width: 355px;
+  }
+  #menu .button-container .btn:nth-child(8) {
+    position: relative;
+    width: 355px;
+    height: 106px;
+  }
+  #menu .button-container .btn:nth-child(8) .normal-state {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 355px;
+    height: 106px;
+    background-image: url("../images/menu-buttons.m.png");
+    background-size: auto;
+    background-position: 0px -735px;
+  }
+  #menu .button-container .btn:nth-child(8) .hover-state {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 355px;
+    height: 106px;
+    background-image: url("../images/menu-buttons.m.png");
+    background-size: auto;
+    background-position: -355px -735px;
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
+  }
+  #menu .button-container .btn:nth-child(8):hover {
+    cursor: pointer;
+  }
+  #menu .button-container .btn:nth-child(8):hover .normal-state {
+    transition: opacity 0.4s ease-in 0.4s;
+    opacity: 0;
+  }
+  #menu .button-container .btn:nth-child(8):hover .hover-state {
+    opacity: 1;
+  }
+  #menu .button-container .btn:nth-child(8) .bottom-line {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.12);
+  }
+  #menu .button-container .btn:nth-child(7) {
+    position: relative;
+    width: 355px;
+    height: 106px;
+  }
+  #menu .button-container .btn:nth-child(7) .normal-state {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 355px;
+    height: 106px;
+    background-image: url("../images/menu-buttons.m.png");
+    background-size: auto;
+    background-position: 0px -630px;
+  }
+  #menu .button-container .btn:nth-child(7) .hover-state {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 355px;
+    height: 106px;
+    background-image: url("../images/menu-buttons.m.png");
+    background-size: auto;
+    background-position: -355px -630px;
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
+  }
+  #menu .button-container .btn:nth-child(7):hover {
+    cursor: pointer;
+  }
+  #menu .button-container .btn:nth-child(7):hover .normal-state {
+    transition: opacity 0.4s ease-in 0.4s;
+    opacity: 0;
+  }
+  #menu .button-container .btn:nth-child(7):hover .hover-state {
+    opacity: 1;
+  }
+  #menu .button-container .btn:nth-child(7) .bottom-line {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.12);
+  }
+  #menu .button-container .btn:nth-child(6) {
+    position: relative;
+    width: 355px;
+    height: 106px;
+  }
+  #menu .button-container .btn:nth-child(6) .normal-state {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 355px;
+    height: 106px;
+    background-image: url("../images/menu-buttons.m.png");
+    background-size: auto;
+    background-position: 0px -525px;
+  }
+  #menu .button-container .btn:nth-child(6) .hover-state {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 355px;
+    height: 106px;
+    background-image: url("../images/menu-buttons.m.png");
+    background-size: auto;
+    background-position: -355px -525px;
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
+  }
+  #menu .button-container .btn:nth-child(6):hover {
+    cursor: pointer;
+  }
+  #menu .button-container .btn:nth-child(6):hover .normal-state {
+    transition: opacity 0.4s ease-in 0.4s;
+    opacity: 0;
+  }
+  #menu .button-container .btn:nth-child(6):hover .hover-state {
+    opacity: 1;
+  }
+  #menu .button-container .btn:nth-child(6) .bottom-line {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.12);
+  }
+  #menu .button-container .btn:nth-child(5) {
+    position: relative;
+    width: 355px;
+    height: 106px;
+  }
+  #menu .button-container .btn:nth-child(5) .normal-state {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 355px;
+    height: 106px;
+    background-image: url("../images/menu-buttons.m.png");
+    background-size: auto;
+    background-position: 0px -420px;
+  }
+  #menu .button-container .btn:nth-child(5) .hover-state {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 355px;
+    height: 106px;
+    background-image: url("../images/menu-buttons.m.png");
+    background-size: auto;
+    background-position: -355px -420px;
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
+  }
+  #menu .button-container .btn:nth-child(5):hover {
+    cursor: pointer;
+  }
+  #menu .button-container .btn:nth-child(5):hover .normal-state {
+    transition: opacity 0.4s ease-in 0.4s;
+    opacity: 0;
+  }
+  #menu .button-container .btn:nth-child(5):hover .hover-state {
+    opacity: 1;
+  }
+  #menu .button-container .btn:nth-child(5) .bottom-line {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.12);
+  }
+  #menu .button-container .btn:nth-child(4) {
+    position: relative;
+    width: 355px;
+    height: 106px;
+  }
+  #menu .button-container .btn:nth-child(4) .normal-state {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 355px;
+    height: 106px;
+    background-image: url("../images/menu-buttons.m.png");
+    background-size: auto;
+    background-position: 0px -315px;
+  }
+  #menu .button-container .btn:nth-child(4) .hover-state {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 355px;
+    height: 106px;
+    background-image: url("../images/menu-buttons.m.png");
+    background-size: auto;
+    background-position: -355px -315px;
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
+  }
+  #menu .button-container .btn:nth-child(4):hover {
+    cursor: pointer;
+  }
+  #menu .button-container .btn:nth-child(4):hover .normal-state {
+    transition: opacity 0.4s ease-in 0.4s;
+    opacity: 0;
+  }
+  #menu .button-container .btn:nth-child(4):hover .hover-state {
+    opacity: 1;
+  }
+  #menu .button-container .btn:nth-child(4) .bottom-line {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.12);
+  }
+  #menu .button-container .btn:nth-child(3) {
+    position: relative;
+    width: 355px;
+    height: 106px;
+  }
+  #menu .button-container .btn:nth-child(3) .normal-state {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 355px;
+    height: 106px;
+    background-image: url("../images/menu-buttons.m.png");
+    background-size: auto;
+    background-position: 0px -210px;
+  }
+  #menu .button-container .btn:nth-child(3) .hover-state {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 355px;
+    height: 106px;
+    background-image: url("../images/menu-buttons.m.png");
+    background-size: auto;
+    background-position: -355px -210px;
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
+  }
+  #menu .button-container .btn:nth-child(3):hover {
+    cursor: pointer;
+  }
+  #menu .button-container .btn:nth-child(3):hover .normal-state {
+    transition: opacity 0.4s ease-in 0.4s;
+    opacity: 0;
+  }
+  #menu .button-container .btn:nth-child(3):hover .hover-state {
+    opacity: 1;
+  }
+  #menu .button-container .btn:nth-child(3) .bottom-line {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.12);
+  }
+  #menu .button-container .btn:nth-child(2) {
+    position: relative;
+    width: 355px;
+    height: 106px;
+  }
+  #menu .button-container .btn:nth-child(2) .normal-state {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 355px;
+    height: 106px;
+    background-image: url("../images/menu-buttons.m.png");
+    background-size: auto;
+    background-position: 0px -105px;
+  }
+  #menu .button-container .btn:nth-child(2) .hover-state {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 355px;
+    height: 106px;
+    background-image: url("../images/menu-buttons.m.png");
+    background-size: auto;
+    background-position: -355px -105px;
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
+  }
+  #menu .button-container .btn:nth-child(2):hover {
+    cursor: pointer;
+  }
+  #menu .button-container .btn:nth-child(2):hover .normal-state {
+    transition: opacity 0.4s ease-in 0.4s;
+    opacity: 0;
+  }
+  #menu .button-container .btn:nth-child(2):hover .hover-state {
+    opacity: 1;
+  }
+  #menu .button-container .btn:nth-child(2) .bottom-line {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.12);
+  }
+  #menu .button-container .btn:nth-child(1) {
+    position: relative;
+    width: 355px;
+    height: 106px;
+  }
+  #menu .button-container .btn:nth-child(1) .normal-state {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 355px;
+    height: 106px;
+    background-image: url("../images/menu-buttons.m.png");
+    background-size: auto;
+    background-position: 0px 0px;
+  }
+  #menu .button-container .btn:nth-child(1) .hover-state {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 355px;
+    height: 106px;
+    background-image: url("../images/menu-buttons.m.png");
+    background-size: auto;
+    background-position: -355px 0px;
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
+  }
+  #menu .button-container .btn:nth-child(1):hover {
+    cursor: pointer;
+  }
+  #menu .button-container .btn:nth-child(1):hover .normal-state {
+    transition: opacity 0.4s ease-in 0.4s;
+    opacity: 0;
+  }
+  #menu .button-container .btn:nth-child(1):hover .hover-state {
+    opacity: 1;
+  }
+  #menu .button-container .btn:nth-child(1) .bottom-line {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.12);
+  }
+  /* fix elements */
+  #logo {
+    left: 11px;
+    top: 16px;
+  }
+  #background-container {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 950px;
+  }
+  #background-container .statement {
+    position: absolute;
+    margin-left: 0;
+    margin-top: 0;
+    bottom: 13px;
+    left: 30px;
+  }
+  #background-container .point-texture-1,
+  #background-container .point-texture-2,
+  #background-container .point-texture-3 {
+    display: none;
+  }
+  /* index */
+  #index .layout {
+    position: absolute;
+    left: -320%;
+    top: -475%;
+    width: 640%;
+    height: 950%;
+    background-image: url("../images/layouts/index-mobile.jpg");
+    background-size: cover;
+    opacity: 0.4;
+  }
+  #index .center-block {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+  }
+  #index .center-block .center-bubble {
+    position: absolute;
+    left: -280%;
+    top: -383%;
+    width: 582%;
+    height: 451%;
+    background-image: url("../images/index-texture-2.m.png");
+    background-size: cover;
+  }
+  #index .center-block .text-1 {
+    position: absolute;
+    left: -237%;
+    top: -316%;
+    width: 489%;
+    height: 27%;
+    background-image: url("../images/index-text-1.m.png");
+    background-size: cover;
+  }
+  #index .center-block .text-2 {
+    position: absolute;
+    left: -245%;
+    top: -266%;
+    width: 499%;
+    height: 160%;
+    background-image: url("../images/index-text-2.m.png");
+    background-size: cover;
+  }
+  #index .center-block .text-3 {
+    position: absolute;
+    left: -157%;
+    top: -98%;
+    width: 326%;
+    height: 114%;
+    background-image: url("../images/index-text-3.m.png");
+    background-size: cover;
+  }
+  #index .button-1 {
+    position: absolute;
+    left: -229%;
+    top: 84%;
+    width: 130%;
+    height: 69%;
+    background-image: url("../images/index-button-1.m.png");
+    background-size: cover;
+  }
+  #index .button-2 {
+    position: absolute;
+    left: -94%;
+    top: 85%;
+    width: 155%;
+    height: 62%;
+    background-image: url("../images/index-button-2.m.png");
+    background-size: cover;
+  }
+  #index .button-3 {
+    position: absolute;
+    left: 66%;
+    top: 80%;
+    width: 162%;
+    height: 71%;
+    background-image: url("../images/index-button-3.m.png");
+    background-size: cover;
+  }
+  #index .char-1 {
+    position: absolute;
+    left: 85%;
+    top: 212%;
+    width: 203%;
+    height: 267%;
+    background-image: url("../images/index-char-1.m.png");
+    background-size: cover;
+  }
+  #index .bubble-1 {
+    position: absolute;
+    left: 147%;
+    top: 162%;
+    width: 163%;
+    height: 110%;
+    background-image: url("../images/index-bubble-1.m.png");
+    background-size: cover;
+  }
+  #index .char-2 {
+    position: absolute;
+    left: -427%;
+    top: -69%;
+    width: 298%;
+    height: 202%;
+    background-image: url("../images/index-char-2.m.png");
+    background-size: cover;
+  }
+  #index .bubble-2 {
+    position: absolute;
+    left: -303%;
+    top: -170%;
+    width: 145%;
+    height: 99%;
+    background-image: url("../images/index-bubble-2.m.png");
+    background-size: cover;
+  }
+  #index .thumb-block {
+    left: -261px;
+    top: 207px;
+  }
+  /* reviewer */
+  #reviewer .layout {
+    position: absolute;
+    left: -320%;
+    top: -475%;
+    width: 640%;
+    height: 950%;
+    background-image: url("../images/layouts/reviewer-mobile-2.jpg");
+    background-size: cover;
+    opacity: 0.4;
+  }
+  #reviewer .title {
+    position: absolute;
+    left: -141%;
+    top: -373%;
+    width: 289%;
+    height: 79%;
+    background-image: url("../images/reviewer-title.png");
+    background-size: cover;
+  }
+  #reviewer .pic-1 {
+    position: absolute;
+    left: -248%;
+    top: -242%;
+    width: 500%;
+    height: 392%;
+    background-image: url("../images/reviewer-pic-1.m.png");
+    background-size: cover;
+  }
+  #reviewer .desc-1 {
+    position: absolute;
+    left: -191%;
+    top: 164%;
+    width: 373%;
+    height: 152%;
+    background-image: url("../images/reviewer-desc-1.m.png");
+    background-size: cover;
+  }
+  #reviewer .pic-2 {
+    position: absolute;
+    left: -248%;
+    top: -242%;
+    width: 500%;
+    height: 392%;
+    background-image: url("../images/reviewer-pic-2.m.png");
+    background-size: cover;
+  }
+  #reviewer .desc-2 {
+    position: absolute;
+    left: -223%;
+    top: 168%;
+    width: 444%;
+    height: 147%;
+    background-image: url("../images/reviewer-desc-2.m.png");
+    background-size: cover;
+  }
+  /* participate */
+  #participate .layout {
+    position: absolute;
+    left: -320%;
+    top: -475%;
+    width: 640%;
+    height: 950%;
+    background-image: url("../images/layouts/participate-mobile.jpg");
+    background-size: cover;
+    opacity: 0.4;
+  }
+  #participate .content {
+    position: absolute;
+    left: -293%;
+    top: -377%;
+    width: 587%;
+    height: 684%;
+    background-image: url("../images/participate-content.m.png");
+    background-size: cover;
+  }
+  #participate .char-1 {
+    position: absolute;
+    left: 138%;
+    top: 267%;
+    width: 160%;
+    height: 211%;
+    background-image: url("../images/participate-char-1.m.png");
+    background-size: cover;
+  }
+  #participate .char-2 {
+    position: absolute;
+    left: -350%;
+    top: -403%;
+    width: 220%;
+    height: 149%;
+    background-image: url("../images/participate-char-2.m.png");
+    background-size: cover;
+  }
+  #participate .deco-1 {
+    position: absolute;
+    left: -372%;
+    top: -55%;
+    width: 328%;
+    height: 243%;
+    background-image: url("../images/participate-deco-1.m.png");
+    background-size: cover;
+  }
+  #participate .description {
+    left: -172px;
+    top: -241px;
+    width: 445px;
+    height: 143px;
+    font-family: '微軟正黑體', "Heiti TC", serif;
+    font-size: 24px;
+    color: #999999;
+  }
+  #participate .checkbox {
+    left: -234px;
+    top: 212px;
+  }
+  #participate .btn-upload {
+    position: absolute;
+    left: -172%;
+    top: 134%;
+    width: 156%;
+    height: 49%;
+    background-image: url("../images/participate-button-upload.png");
+    background-size: cover;
+  }
+  #participate .btn-preview {
+    position: absolute;
+    left: 20%;
+    top: 134%;
+    width: 156%;
+    height: 49%;
+    background-image: url("../images/participate-button-preview.png");
+    background-size: cover;
+  }
+  #participate .btn-send {
+    position: absolute;
+    left: -83%;
+    top: 324%;
+    width: 161%;
+    height: 57%;
+    background-image: url("../images/participate-button-send.png");
+    background-size: cover;
+  }
+  #participate .btn-rule {
+    left: -56px;
+    top: 278px;
+    width: 93px;
+    height: 35px;
+  }
+  /** entry-view **/
+  #entry-view .layout {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 640px;
+    height: 950px;
+    margin-left: 0px;
+    margin-top: 0px;
+    background-image: url("../images/layouts/entry-view-mobile.jpg");
+    background-size: auto;
+    opacity: .3;
+  }
+  #entry-view .wrapper .basement {
+    position: absolute;
+    left: -281px;
+    top: -393px;
+    width: 562px;
+    height: 810px;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+  #entry-view .wrapper .btn-close {
+    left: 245px;
+    top: -379px;
+  }
+  #entry-view .wrapper .arrow-left {
+    left: -300px;
+    top: -17px;
+  }
+  #entry-view .wrapper .arrow-right {
+    left: 265px;
+    top: -17px;
+  }
+  #entry-view .wrapper .optional-fields {
+    position: absolute;
+    left: 0;
+    top: 60px;
+  }
+  #entry-view .wrapper .optional-fields .texts-1 {
+    position: absolute;
+    left: -230px;
+    top: -29px;
+    width: 224px;
+    height: 62px;
+    margin-left: 0px;
+    margin-top: 0px;
+    background-image: url("../images/entry-view-texts.m.png");
+    background-size: auto;
+    background-position: left top;
+  }
+  #entry-view .wrapper .optional-fields .field-num-votes {
+    left: -139px;
+    top: -37px;
+  }
+  #entry-view .wrapper .optional-fields .field-serial {
+    font-family: '微軟正黑體', "Heiti TC", serif;
+    font-size: 25px;
+    color: black;
+    left: -156px;
+    top: 3px;
+  }
+  #entry-view .wrapper .optional-fields .field-author {
+    font-family: '微軟正黑體', "Heiti TC", serif;
+    font-size: 25px;
+    color: black;
+    position: absolute;
+    left: 10px;
+    top: 3px;
+  }
+  #entry-view .wrapper .texts-2 {
+    position: absolute;
+    left: -230px;
+    top: 93px;
+    width: 224px;
+    height: 31px;
+    margin-left: 0px;
+    margin-top: 0px;
+    background-image: url("../images/entry-view-texts.m.png");
+    background-size: auto;
+    background-position: left bottom;
+  }
+  #entry-view .wrapper .field-description {
+    font-family: '微軟正黑體', "Heiti TC", serif;
+    font-size: 18px;
+    color: black;
+    left: -230px;
+    top: 132px;
+    width: 461px;
+    height: 234px;
+    letter-spacing: 1px;
+    line-height: 25px;
+  }
+  #entry-view .wrapper .image-preview {
+    left: -235px;
+    top: -339px;
+  }
+  #entry-view .wrapper .btn-to-list {
+    position: absolute;
+    left: 0px;
+    top: 380px;
+    width: 119px;
+    height: 27px;
+    margin-left: 0px;
+    margin-top: 0px;
+    background-image: url("../images/entry-view-btn-to-list.png");
+    background-size: auto;
+  }
+  #entry-view .wrapper .btn-vote {
+    position: absolute;
+    left: 139px;
+    top: 380px;
+    width: 119px;
+    height: 27px;
+    margin-left: 0px;
+    margin-top: 0px;
+    background-image: url("../images/entry-view-btn-vote.png");
+    background-size: auto;
+  }
+  #entry-view .wrapper .btn-to-list,
+  #entry-view .wrapper .btn-vote {
+    cursor: pointer;
+  }
+  #entry-view .wrapper .btn-to-list:active,
+  #entry-view .wrapper .btn-vote:active {
+    margin-top: 2px;
+  }
+  /** common form **/
+  #common-form .layout {
+    position: absolute;
+    left: -320%;
+    top: -475%;
+    width: 640%;
+    height: 950%;
+    background-image: url("../images/layouts/vote-step-form-mobile.jpg");
+    background-size: cover;
+    opacity: 0.4;
+  }
+  #common-form .desc.participate {
+    position: absolute;
+    left: -299%;
+    top: -377%;
+    width: 597%;
+    height: 154%;
+    background-image: url("../images/participate-form-desc.m.png");
+    background-size: cover;
+  }
+  #common-form .desc.vote {
+    position: absolute;
+    left: -211%;
+    top: -377%;
+    width: 399%;
+    height: 156%;
+    background-image: url("../images/vote-form-desc.m.png");
+    background-size: cover;
+  }
+  #common-form .desc.fill {
+    position: absolute;
+    left: -299%;
+    top: -376%;
+    width: 597%;
+    height: 154%;
+    background-image: url("../images/fill-form-desc.m.png");
+    background-size: cover;
+  }
+  #common-form .btn-send {
+    position: absolute;
+    left: -84%;
+    top: 333%;
+    width: 161%;
+    height: 57%;
+    background-image: url("../images/common-form-btn-send.png");
+    background-size: cover;
+  }
+  #common-form .char-1 {
+    position: absolute;
+    left: 120%;
+    top: -454%;
+    width: 124%;
+    height: 163%;
+    background-image: url("../images/common-form-char-1.m.png");
+    background-size: cover;
+  }
+  #common-form .char-2 {
+    position: absolute;
+    left: 106%;
+    top: 319%;
+    width: 209%;
+    height: 181%;
+    background-image: url("../images/common-form-char-2.m.png");
+    background-size: cover;
+  }
+  #common-form .fields {
+    position: absolute;
+    left: -294%;
+    top: -187%;
+    width: 385%;
+    height: 74%;
+    background-image: url("../images/common-form-fields.m.png");
+    background-size: cover;
+  }
+  #common-form .fields .field-name,
+  #common-form .fields .field-phone,
+  #common-form .fields .field-email {
+    position: absolute;
+    height: 30px;
+    border: 1px solid black;
+    background: white;
+    padding: 0 8px;
+    font-family: '微軟正黑體', "Heiti TC", serif;
+    font-size: 14px;
+    color: #555;
+  }
+  #common-form .fields .field-name {
+    left: 125px;
+    top: -7px;
+    width: 120px;
+  }
+  #common-form .fields .field-phone {
+    left: 395px;
+    top: -7px;
+    width: 178px;
+  }
+  #common-form .fields .field-email {
+    left: 126px;
+    top: 51px;
+    width: 447px;
+  }
+  #common-form .eula-content {
+    position: absolute;
+    background: white;
+    border: 1px solid black;
+    left: -296px;
+    top: -81px;
+    width: 591px;
+    height: 338px;
+  }
+  #common-form .eula-content .scroll-base {
+    position: absolute;
+    height: 100%;
+    width: 27px;
+    right: 0;
+    background-color: #fff7dc;
+  }
+  #common-form .eula-content .content-container {
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    width: 585px;
+    height: 332px;
+  }
+  #common-form .eula-content .content-container .content {
+    position: relative;
+    width: 528px;
+    height: 608px;
+    left: 13px;
+    background-image: url("../images/eula-content.m.png");
+    background-size: auto;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow-y: auto;
+  }
+  #common-form .eula-content .ss_scrollbase {
+    background: none;
+  }
+  #common-form .eula-content .ss_scrollbar {
+    position: absolute;
+    background-image: url("../images/scroll-bar.png");
+    background-size: auto;
+    width: 21px;
+    height: 38px;
+    margin-left: 0;
+    margin-top: 0;
+    background-color: transparent;
+  }
+  #common-form .eula-confirm {
+    position: absolute;
+    left: -256%;
+    top: 280%;
+    width: 399%;
+    height: 20%;
+    background-image: url("../images/common-form-eula-text.m.png");
+    background-size: cover;
+  }
+  #common-form .eula-confirm .checkbox {
+    position: absolute;
+    left: -39px;
+    top: -4px;
+  }
+  /** rule **/
+  #rule .layout {
+    position: absolute;
+    left: -320%;
+    top: -475%;
+    width: 640%;
+    height: 950%;
+    background-image: url("../images/layouts/rule-mobile.jpg");
+    background-size: cover;
+    opacity: 0.4;
+  }
+  #rule .basement {
+    position: absolute;
+    left: -302px;
+    top: -374px;
+    width: 601px;
+    height: 780px;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+  #rule .basement .title {
+    position: absolute;
+    left: 160px;
+    top: 16px;
+    width: 288px;
+    height: 80px;
+    margin-left: 0px;
+    margin-top: 0px;
+    background-image: url("../images/rule-title.m.png");
+    background-size: auto;
+  }
+  #rule .basement .scroll-base {
+    position: absolute;
+    left: 558px;
+    top: 116px;
+    width: 43px;
+    height: 664px;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+  #rule .basement .btn-close {
+    position: absolute;
+    left: 564px;
+    top: 9px;
+    width: 28px;
+    height: 28px;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+  #rule .basement .content-container {
+    position: absolute;
+    left: 23px;
+    top: 116px;
+    width: 530px;
+    height: 654px;
+  }
+  #rule .basement .content-container .content {
+    width: 513px;
+    height: 1004px;
+    margin-top: 4px;
+    background-image: url("../images/rule-content.m.png");
+    background-size: auto;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow-y: auto;
+  }
+  #rule .basement .ss_scrollbase {
+    background: none;
+  }
+  #rule .basement .ss_scrollbar {
+    position: absolute;
+    background-image: url("../images/scroll-bar.m.png");
+    background-size: auto;
+    width: 33px;
+    height: 101px;
+    margin-left: 0;
+    margin-top: 0;
+    background-color: transparent;
+  }
 }

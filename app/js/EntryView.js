@@ -13,6 +13,8 @@
             $doms.parent = $("#scene-container");
             $doms.container = $('#entry-view');
 
+            $doms.content = $doms.container.find(".wrapper");
+
             $doms.imagePreview = $doms.container.find(".image-preview");
 
 
@@ -151,9 +153,10 @@
             if (delay === undefined) delay = 0;
 
             var tl = new TimelineMax;
-            tl.set($doms.container, {autoAlpha: 0, marginTop: -300});
+            tl.set($doms.container, {autoAlpha: 0});
+            tl.set($doms.content, {marginTop: -300});
             tl.to($doms.container, .3, {autoAlpha: 1}, delay);
-            tl.to($doms.container, .6, {marginTop: 0, ease:Back.easeOut}, delay);
+            tl.to($doms.content, .6, {marginTop: 0, ease:Back.easeOut}, delay);
             tl.add(function ()
             {
                 if (cb) cb.apply();
@@ -166,7 +169,8 @@
             _isHiding = true;
 
             var tl = new TimelineMax;
-            tl.to($doms.container, .4, {autoAlpha: 0, marginTop: -200}, delay);
+            tl.to($doms.container,.4, {autoAlpha: 0}, delay);
+            //tl.to($doms.content, .4, {marginTop: -200}, delay);
             tl.add(function ()
             {
                 $("#scene-container").toggleClass("extend-mode", false);

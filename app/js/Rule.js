@@ -36,18 +36,20 @@
             hide(cb);
         },
 
-        resize: function (width, height, scale)
+        resize: function ()
         {
+            if(!_isInit) return;
+
             var vp = Main.settings.viewport;
 
             if(vp.changed)
             {
-
+                var scrollBarSize = vp.index == 0? 101: 44;
 
                 var containerHeight = $doms.contentContainer.height(),
                     containerWidth = $doms.contentContainer.width();
                 //var $ssContainer = $(_ss.doms.container);
-                _ss.containerSize(null, containerHeight).scrollBound(containerWidth+10, 3, 0, containerHeight-44).update(true);
+                _ss.containerSize(null, containerHeight).scrollBound(containerWidth+10, 3, 0, containerHeight-scrollBarSize).update(true);
             }
 
         }

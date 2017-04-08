@@ -15,13 +15,20 @@
 
             $doms.buttonContainer = $doms.container.find(".button-container");
 
-            $doms.btnReviewer = $doms.container.find(".btn:nth-child(1)").on(_CLICK_, function()
+
+            $doms.btnIndex = $doms.container.find(".btn:nth-child(1)").on(_CLICK_, function()
+            {
+                self.close();
+                SceneHandler.toHash("/Index");
+            });
+
+            $doms.btnReviewer = $doms.container.find(".btn:nth-child(2)").on(_CLICK_, function()
             {
                 self.close();
                 SceneHandler.toHash("/Reviewer");
             });
 
-            $doms.btnParticipate = $doms.container.find(".btn:nth-child(2)").on(_CLICK_, function()
+            $doms.btnParticipate = $doms.container.find(".btn:nth-child(3)").on(_CLICK_, function()
             {
                 self.close();
 
@@ -31,7 +38,7 @@
                 });
             });
 
-            $doms.btnFill = $doms.container.find(".btn:nth-child(3)").on(_CLICK_, function()
+            $doms.btnFill = $doms.container.find(".btn:nth-child(4)").on(_CLICK_, function()
             {
                 self.close();
 
@@ -41,7 +48,7 @@
                 });
             });
 
-            $doms.btnEntries = $doms.container.find(".btn:nth-child(4)").on(_CLICK_, function()
+            $doms.btnEntries = $doms.container.find(".btn:nth-child(5)").on(_CLICK_, function()
             {
                 self.close();
 
@@ -51,29 +58,23 @@
                 });
             });
 
-            $doms.btnRule = $doms.container.find(".btn:nth-child(5)").on(_CLICK_, function()
+            $doms.btnRule = $doms.container.find(".btn:nth-child(6)").on(_CLICK_, function()
             {
                 self.close();
                 SceneHandler.toHash("/Rule");
             });
 
-            $doms.btnWinners = $doms.container.find(".btn:nth-child(6)").on(_CLICK_, function()
+            $doms.btnWinners = $doms.container.find(".btn:nth-child(7)").on(_CLICK_, function()
             {
                 //self.close();
                 //SceneHandler.toHash("/Index");
             }).css('display', 'none');
 
-            $doms.btnShows = $doms.container.find(".btn:nth-child(7)").on(_CLICK_, function()
+            $doms.btnShows = $doms.container.find(".btn:nth-child(8)").on(_CLICK_, function()
             {
                 //self.close();
                 //SceneHandler.toHash("/Index");
             }).css('display', 'none');
-
-            $doms.btnIndex = $doms.container.find(".btn:nth-child(8)").on(_CLICK_, function()
-            {
-                self.close();
-                SceneHandler.toHash("/Index");
-            });
         },
 
         open: function()

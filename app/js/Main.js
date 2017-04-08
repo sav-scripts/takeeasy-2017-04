@@ -110,17 +110,17 @@
                             }
                         }
 
-                        if(hashName == '/Participate' || hashName == '/Fill')
-                        {
-                            if(!Main.settings.fbToken)
-                            {
-                                //console.log("no token");
-                                hashName = null; // cancel content change
-                                SceneHandler.setHash('/Index');
-
-                                return null;
-                            }
-                        }
+                        //if(hashName == '/Participate' || hashName == '/Fill')
+                        //{
+                        //    if(!Main.settings.fbToken)
+                        //    {
+                        //        //console.log("no token");
+                        //        hashName = null; // cancel content change
+                        //        SceneHandler.setHash('/Index');
+                        //
+                        //        return null;
+                        //    }
+                        //}
 
                         if(hashName == '/Participate' || hashName == '/Fill')
                         {
@@ -358,6 +358,9 @@
         self.settings.viewport.changed = obj.modeChanged;
         self.settings.viewport.index = obj.modeIndex;
         //ScalableContent.updateResizeAble();
+
+        if(SceneHandler.currentScene) SceneHandler.currentScene.resize();
+        CommonForm.resize();
     }
 
 }());
