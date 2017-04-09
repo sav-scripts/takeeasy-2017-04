@@ -110,17 +110,20 @@
                             }
                         }
 
-                        //if(hashName == '/Participate' || hashName == '/Fill')
-                        //{
-                        //    if(!Main.settings.fbToken)
-                        //    {
-                        //        //console.log("no token");
-                        //        hashName = null; // cancel content change
-                        //        SceneHandler.setHash('/Index');
-                        //
-                        //        return null;
-                        //    }
-                        //}
+                        if(!(Utility.urlParams.debug == '1'))
+                        {
+                            if(hashName == '/Participate' || hashName == '/Fill')
+                            {
+                                if(!Main.settings.fbToken)
+                                {
+                                    //console.log("no token");
+                                    hashName = null; // cancel content change
+                                    SceneHandler.setHash('/Index');
+
+                                    return null;
+                                }
+                            }
+                        }
 
                         if(hashName == '/Participate' || hashName == '/Fill')
                         {

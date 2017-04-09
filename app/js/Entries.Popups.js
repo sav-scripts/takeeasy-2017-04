@@ -51,8 +51,6 @@
             if(!_isHiding) return;
             _isHiding = false;
 
-            console.log('show');
-
             $doms.parent.append($doms.container);
 
             if (delay === undefined) delay = 0;

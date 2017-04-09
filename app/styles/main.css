@@ -228,6 +228,7 @@ div.disactivated {
   width: 100%;
   height: 9px;
   background-color: #996b37;
+  z-index: 1000;
 }
 #menu .icon {
   position: absolute;
@@ -3387,6 +3388,394 @@ div.disactivated {
   #entry-view .wrapper .btn-to-list:active,
   #entry-view .wrapper .btn-vote:active {
     margin-top: 2px;
+  }
+  /* fill-select */
+  #fill {
+    /* select-step */
+    /* filling-step */
+  }
+  #fill .layout {
+    position: absolute;
+    left: -320%;
+    top: -475%;
+    width: 640%;
+    height: 950%;
+    background-image: url("../images/layouts/fill-select-mobile.jpg");
+    background-size: cover;
+    opacity: 0.4;
+  }
+  #fill .texture-1 {
+    position: absolute;
+    left: -372%;
+    top: 174%;
+    width: 359%;
+    height: 266%;
+    background-image: url("../images/fill-select-texture-1.png");
+    background-size: cover;
+  }
+  #fill .char-1 {
+    position: absolute;
+    left: 75%;
+    top: 177%;
+    width: 234%;
+    height: 308%;
+    background-image: url("../images/fill-select-char-1.m.png");
+    background-size: cover;
+  }
+  #fill .char-2 {
+    position: absolute;
+    left: -351%;
+    top: -403%;
+    width: 220%;
+    height: 149%;
+    background-image: url("../images/fill-select-char-2.m.png");
+    background-size: cover;
+  }
+  #fill .select-step .title {
+    position: absolute;
+    left: -143%;
+    top: -373%;
+    width: 286%;
+    height: 119%;
+    background-image: url("../images/fill-title.png");
+    background-size: cover;
+  }
+  #fill .select-step .items {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 100px;
+  }
+  #fill .select-step .items .item-1 {
+    position: absolute;
+    left: -236px;
+    top: -217px;
+    width: 464px;
+    height: 347px;
+    margin-left: 0px;
+    margin-top: 0px;
+    background-image: url("../images/fill-filling-work-1.png");
+    background-size: auto;
+  }
+  #fill .select-step .items .item-2 {
+    position: absolute;
+    left: -236px;
+    top: -217px;
+    width: 464px;
+    height: 347px;
+    margin-left: 0px;
+    margin-top: 0px;
+    background-image: url("../images/fill-filling-work-2.png");
+    background-size: auto;
+  }
+  #fill .select-step .items .item-3 {
+    position: absolute;
+    left: -236px;
+    top: -217px;
+    width: 464px;
+    height: 347px;
+    margin-left: 0px;
+    margin-top: 0px;
+    background-image: url("../images/fill-filling-work-3.png");
+    background-size: auto;
+  }
+  #fill .select-step .items .item-4 {
+    position: absolute;
+    left: -236px;
+    top: -217px;
+    width: 464px;
+    height: 347px;
+    margin-left: 0px;
+    margin-top: 0px;
+    background-image: url("../images/fill-filling-work-4.png");
+    background-size: auto;
+  }
+  #fill .select-step .items .item-1,
+  #fill .select-step .items .item-2,
+  #fill .select-step .items .item-3,
+  #fill .select-step .items .item-4 {
+    background-position-y: top;
+    background-repeat: no-repeat;
+    transition: none;
+  }
+  #fill .select-step .items .item-1:hover,
+  #fill .select-step .items .item-2:hover,
+  #fill .select-step .items .item-3:hover,
+  #fill .select-step .items .item-4:hover {
+    cursor: pointer;
+    margin-top: 0;
+    height: 347px;
+  }
+  #fill .filling-step .btn-to-sample {
+    position: absolute;
+    left: 238%;
+    top: -248%;
+    width: 53%;
+    height: 74%;
+    background-image: url("../images/fill-filling-btn-to-sample.png");
+    background-size: cover;
+    cursor: pointer;
+  }
+  #fill .filling-step .eula-text {
+    position: absolute;
+    left: -237%;
+    top: 134%;
+    width: 490%;
+    height: 54%;
+    background-image: url("../images/fill-filling-eula-text.png");
+    background-size: cover;
+  }
+  #fill .filling-step .checkbox {
+    left: -274px;
+    top: 130px;
+  }
+  #fill .filling-step .checkbox.big {
+    width: 29px;
+    height: 29px;
+  }
+  #fill .filling-step .checkbox.big label {
+    width: 27px;
+    height: 27px;
+  }
+  #fill .filling-step .checkbox.big label:after {
+    width: 13px;
+    height: 7px;
+    left: 7px;
+    top: 7px;
+    border: 4px solid #000000;
+    border-top: none;
+    border-right: none;
+  }
+  #fill .filling-step .btn-send {
+    position: absolute;
+    left: -87%;
+    top: 213%;
+    width: 161%;
+    height: 57%;
+    background-image: url("../images/fill-filling-btn-send.png");
+    background-size: cover;
+  }
+  #fill .filling-step .working-place {
+    left: -5px;
+  }
+  /** entries **/
+  #entries .layout {
+    position: absolute;
+    left: -320%;
+    top: -475%;
+    width: 640%;
+    height: 950%;
+    background-image: url("../images/layouts/entries-list-mobile.jpg");
+    background-size: cover;
+    opacity: 0.4;
+  }
+  #entries .content-title .text-1 {
+    position: absolute;
+    left: -247%;
+    top: -375%;
+    width: 498%;
+    height: 80%;
+    background-image: url("../images/entries-text-1.m.png");
+    background-size: cover;
+  }
+  #entries .content-title .text-2 {
+    position: absolute;
+    left: -239%;
+    top: -295%;
+    width: 476%;
+    height: 28%;
+    background-image: url("../images/entries-text-2.m.png");
+    background-size: cover;
+  }
+  #entries .content-title .char-1,
+  #entries .content-title .char-2 {
+    display: none;
+  }
+  #entries .content-list {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
+  #entries .content-list .tab-by-date {
+    position: absolute;
+    left: -286px;
+    top: -181px;
+    width: 217px;
+    height: 42px;
+    margin-left: 0px;
+    margin-top: 0px;
+    background-image: url("../images/entries-button-tab-by-date.m.png");
+    background-size: auto;
+  }
+  #entries .content-list .tab-by-rank {
+    position: absolute;
+    left: -48px;
+    top: -181px;
+    width: 217px;
+    height: 42px;
+    margin-left: 0px;
+    margin-top: 0px;
+    background-image: url("../images/entries-button-tab-by-rank.m.png");
+    background-size: auto;
+  }
+  #entries .content-list .bottom-part {
+    position: absolute;
+    left: -286px;
+    top: -140px;
+    width: 571px;
+    height: 539px;
+    margin-left: 0px;
+    margin-top: 0px;
+    background: white;
+  }
+  #entries .content-list .bottom-part .arrow-left {
+    left: -20px;
+    top: 247px;
+  }
+  #entries .content-list .bottom-part .arrow-right {
+    left: 552px;
+    top: 247px;
+  }
+  #entries .content-list .bottom-part .output-mask {
+    position: absolute;
+    left: 66px;
+    top: 19px;
+    width: 441px;
+    height: 453px;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+  #entries .content-list .bottom-part .output-mask .output-container {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 530px;
+    height: 453px;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+  #entries .content-list .bottom-part .output-mask .output-container .thumb-container {
+    background-image: url("../images/entries-thumb-base.m.png");
+    background-size: auto;
+    width: 185px;
+    height: 218px;
+    margin-right: 71px;
+    margin-bottom: 16px;
+  }
+  #entries .content-list .bottom-part .output-mask .output-container .thumb-container .thumb {
+    left: 8px;
+    top: 11px;
+    width: 164px;
+    height: 123px;
+  }
+  #entries .content-list .bottom-part .output-mask .output-container .thumb-container .text-num-votes,
+  #entries .content-list .bottom-part .output-mask .output-container .thumb-container .text-author,
+  #entries .content-list .bottom-part .output-mask .output-container .thumb-container .text-serial {
+    margin-left: 11px;
+    font-family: '微軟正黑體', "Heiti TC", serif;
+    font-size: 17px;
+    color: #000;
+  }
+  #entries .content-list .bottom-part .output-mask .output-container .thumb-container .text-num-votes {
+    margin-top: 138px;
+  }
+  #entries .content-list .bottom-part .output-mask .output-container .thumb-container .text-author {
+    margin-top: 1px;
+  }
+  #entries .content-list .bottom-part .output-mask .output-container .thumb-container .text-serial {
+    margin-top: 1px;
+  }
+  #entries .content-list .bottom-part .loading-hint {
+    bottom: 16px;
+    font-family: '微軟正黑體', "Heiti TC", serif;
+    font-size: 20px;
+    color: #000;
+  }
+  #entries .content-list .bottom-part .page-index-container {
+    position: absolute;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    bottom: 16px;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    height: 28px;
+    cursor: default;
+  }
+  #entries .content-list .bottom-part .page-index-container .word,
+  #entries .content-list .bottom-part .page-index-container .word-prev-block,
+  #entries .content-list .bottom-part .page-index-container .word-next-block,
+  #entries .content-list .bottom-part .page-index-container .word-prev-page,
+  #entries .content-list .bottom-part .page-index-container .word-next-page {
+    display: inline-block;
+    height: 26px;
+    line-height: 25px;
+    border-radius: 30px;
+    font-family: '微軟正黑體', "Heiti TC", serif;
+    font-size: 19px;
+    color: #000;
+    cursor: pointer;
+  }
+  #entries .content-list .bottom-part .page-index-container .word {
+    width: 26px;
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+  #entries .content-list .bottom-part .page-index-container .word.activated {
+    color: white;
+    background: #ff9c00;
+  }
+  #entries .content-list .bottom-part .page-index-container .word-prev-block,
+  #entries .content-list .bottom-part .page-index-container .word-next-block {
+    width: 30px;
+    letter-spacing: 2px;
+  }
+  #entries .content-list .bottom-part .page-index-container .word-prev-page,
+  #entries .content-list .bottom-part .page-index-container .word-next-page {
+    width: 64px;
+    letter-spacing: 2px;
+  }
+  #entries .content-list .search-bar {
+    position: absolute;
+    left: -218px;
+    top: -243px;
+    width: 505px;
+    height: 40px;
+    margin-left: 0px;
+    margin-top: 0px;
+    background-image: url("../images/entries-search-bar.m.png");
+    background-size: auto;
+  }
+  #entries .content-list .search-bar .btn-name {
+    position: absolute;
+    left: 314px;
+    top: 3px;
+    width: 84px;
+    height: 33px;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+  #entries .content-list .search-bar .btn-serial {
+    position: absolute;
+    left: 416px;
+    top: 3px;
+    width: 80px;
+    height: 33px;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+  #entries .content-list .search-bar .field-keyword {
+    width: 291px;
+    height: 32px;
+    font-family: '微軟正黑體', "Heiti TC", serif;
+    font-size: 16px;
+    color: #000;
   }
   /** common form **/
   #common-form .layout {

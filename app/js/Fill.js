@@ -136,7 +136,10 @@
 
         resize: function ()
         {
-
+            if(_isInit)
+            {
+                if(_stepDic[_currentStep] && _stepDic[_currentStep].resize) _stepDic[_currentStep].resize();
+            }
         }
     };
 

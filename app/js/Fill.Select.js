@@ -2,7 +2,10 @@
 {
     var $doms = {},
         _isHiding = true,
-        _numWorks = 4;
+        _numWorks = 4,
+        _mobileGap = 475,
+        _currentIndex = 1,
+        _tl;
 
     var self = window.Fill.Select =
     {
@@ -20,12 +23,28 @@
 
             function setupItem(index)
             {
-                var $item = $doms.container.find(".item-" + index);
+                var $item = $doms['item-' + index] = $doms.container.find(".item-" + index);
                 $item.on(_CLICK_, function()
                 {
-                    Fill.Filling.toIndex(index-1, false, true);
-                    Fill.toStep('filling');
+                    if(Main.settings.viewport.index == 1)
+                    {
+                        toFilling(index);
+                    }
+                    else if(_currentIndex == index)
+                    {
+                        toFilling(index);
+                    }
+                    else
+                    {
+                        toIndex(index);
+                    }
                 });
+            }
+
+            function toFilling(index)
+            {
+                Fill.Filling.toIndex(index-1, false, true);
+                Fill.toStep('filling');
             }
         },
 
@@ -61,7 +80,90 @@
                 if (cb) cb.apply();
             });
 
+        },
+
+        resize: function()
+        {
+            update();
         }
     };
+
+    function update()
+    {
+        if(_tl)
+        {
+            _tl.kill();
+            _tl = null;
+        }
+
+        var vp = Main.settings.viewport;
+
+        var i,
+            startOffset = -(_currentIndex-1) * _mobileGap,
+            $dom,
+            offsetP,
+            scale;
+
+        if(vp.index == 0)
+        {
+
+            for(i=1;i<=_numWorks;i++)
+            {
+                $dom = $doms["item-" + i];
+
+                offsetP = ((_mobileGap * (i-1)) + startOffset) + '%';
+
+                scale = i == _currentIndex? 1: .9;
+
+                TweenMax.set($dom, {marginLeft:offsetP, scale:scale});
+            }
+        }
+        else
+        {
+            for(i=1;i<=_numWorks;i++)
+            {
+                $dom = $doms["item-" + i];
+
+                TweenMax.set($dom, {marginLeft:0, scale:1});
+            }
+        }
+    }
+
+    function toIndex(index)
+    {
+        if(index == _currentIndex) return;
+
+        _currentIndex = index;
+
+        var vp = Main.settings.viewport;
+
+        if(vp.index == 0)
+        {
+            if(_tl) _tl.kill();
+
+            var startOffset = -(_currentIndex-1) * _mobileGap,
+                offset,
+                offsetP,
+                scale,
+                $dom;
+
+            for(var i=1;i<=_numWorks;i++)
+            {
+                $dom = $doms["item-" + i];
+
+                offset = _mobileGap * (i-1) + startOffset;
+                offsetP = offset + "%";
+
+                scale = i == _currentIndex? 1: .9;
+
+                _tl = new TimelineMax;
+                _tl.to($dom,.5, {marginLeft:offsetP, scale: scale}, 0);
+            }
+        }
+        else
+        {
+            //TweenMax.set($doms.elements, {marginLeft:0, scale:1});
+        }
+    }
 
 }());

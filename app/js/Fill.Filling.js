@@ -102,6 +102,7 @@
         toIndex: function(index, isToPrev, instantSet)
         {
             if(self.isLocking) return;
+            if(_currentIndex === index) return;
 
             var oldIndex = _currentIndex;
             _currentIndex = index;

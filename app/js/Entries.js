@@ -43,7 +43,6 @@
         {
             if(step == _currentStep) return;
 
-            console.log(_currentStep);
             _stepDic[_currentStep].hide();
 
             _currentStep = step;
