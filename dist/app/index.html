@@ -3,38 +3,157 @@
 <head lang="en">
     <title></title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1334">
+    <meta name="viewport" content="width=640">
+    <link rel="icon" href="misc/16x16.png" type="image/x-icon"/>
 
-    <meta property="fb:app_id" content="xxx"/>
-    <meta property="og:title" content="xxx" />
+    <meta property="fb:app_id" content="1896325417271037"/>
+    <meta property="og:title" content="輕鬆小品 全台輕鬆練肖畫募集大賽！" />
     <meta property="og:type" content="activity" />
-    <meta property="og:url" content="xxx" />
-    <meta property="og:description" content="xxx" />
-    <meta property="og:image" content="xxx" />
+    <meta property="og:url" content="https://takeiteasy.tw/" />
+    <meta property="og:description" content="為紓解大眾生活壓力、促進國民身心健康、培養輕鬆幽默的處世態度，輕鬆小品邀你一起輕鬆練肖畫/話、輕鬆拿獎金，還有機會登上包裝供全民欣賞喔～" />
+    <meta property="og:image" content="https://takeiteasy.tw/misc/fb-share.jpg" />
 
-    <link rel="stylesheet" href="styles/main.161479eb60578ee0de8c.css">
+    <link rel="stylesheet" href="styles/main.3a78b37dea2ced314a04.css">
 
 </head>
 <body onload="Main.init();">
 
+    <!-- Advenue DMP Container - Uni-president Website -->
+    <script type="text/javascript" charset="UTF-8">
+        (function(w,d,s,i,c){var f=d.createElement(s);f.type="text/javascript";f.async=true;f.src=("https:"==d.location.protocol? "https://ssl-avd.innity.net":"http://avd.innity.net")+"/"+i+"/container_"+c+".js";var g=d.getElementsByTagName(s)[0];g.parentNode.insertBefore(f, g);})(window, document, "script", "283", "583e77871c51b1e062befc53");
+    </script>
+    <!-- End Advenue DMP Container -->
 
-    <div id="invisible-container"></div>
+    <script src="js/lib/SquareLoading.1.0.1.js"></script>
+    <script>
+
+        window.Loading = SquareLoading;
+        Loading.progress(0).show();
+
+    </script>
+
+    <div id="invisible-container">
+
+        <div id="entry-view">
+
+            <div class="layout"></div>
+
+            <div class="cover"></div>
+
+            <div class="wrapper">
+
+                <div class="basement"></div>
+                <div class="btn-close"></div>
+                <div class="arrow-left"></div>
+                <div class="arrow-right"></div>
+
+
+                <div class="optional-fields">
+                    <div class="texts-1"></div>
+                    <div class="field-num-votes">29,903</div>
+                    <div class="field-serial">36</div>
+                    <div class="field-author">陳阿吉</div>
+                </div>
+
+
+                <div class="texts-2"></div>
+                <div class="field-description">some texts some textssome textssome textssome textssome textssome textssome textssome textssome texts</div>
+
+                <div class="image-preview"></div>
+
+                <div class="btn-to-list"></div>
+                <div class="btn-vote"></div>
+            </div>
+
+        </div>
+
+        <div id="common-form">
+
+            <!--<div class="layout"></div>-->
+
+            <div class="desc"></div>
+            <div class="btn-send"></div>
+
+            <div class="char-1"></div>
+            <div class="char-2"></div>
+
+            <div class="fields">
+                <input class="field-name" title="" maxlength="50">
+                <input class="field-phone" title="" maxlength="10">
+                <input class="field-email" title="" maxlength="100">
+            </div>
+
+            <div class="eula-content">
+                <div class="scroll-base"></div>
+
+
+                <div class="content-container">
+                    <div class="content"></div>
+                </div>
+
+            </div>
+
+            <div class="eula-confirm">
+
+                <div class="checkbox custom-checkbox middle">
+                    <input type="checkbox" id="eula-checkbox" class="eula-checkbox" />
+                    <label for="eula-checkbox"></label>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
     <div id="scene-container">
 
-        <div id="index"></div>
 
+        <div class="main-background"></div>
+
+        <div id="background-container">
+
+            <div class="point-texture-1"></div>
+            <div class="point-texture-2"></div>
+            <div class="point-texture-3"></div>
+
+            <div class="statement"></div>
+
+        </div>
+
+        <div id="logo"></div>
+
+    </div>
+
+    <div id="menu">
+        <div class="icon"></div>
+
+        <div class="button-container">
+
+            <div class="btn"><div class="normal-state"></div><div class="hover-state"></div><div class="bottom-line"></div></div>
+            <div class="btn"><div class="normal-state"></div><div class="hover-state"></div><div class="bottom-line"></div></div>
+            <div class="btn"><div class="normal-state"></div><div class="hover-state"></div><div class="bottom-line"></div></div>
+            <div class="btn"><div class="normal-state"></div><div class="hover-state"></div><div class="bottom-line"></div></div>
+
+            <div class="btn"><div class="normal-state"></div><div class="hover-state"></div><div class="bottom-line"></div></div>
+            <div class="btn"><div class="normal-state"></div><div class="hover-state"></div><div class="bottom-line"></div></div>
+            <div class="btn"><div class="normal-state"></div><div class="hover-state"></div><div class="bottom-line"></div></div>
+            <div class="btn"><div class="normal-state"></div><div class="hover-state"></div><div class="bottom-line"></div></div>
+
+        </div>
     </div>
 
     <div id="fb-root"></div>
 
+    <script src="js/lib/modernizr-custom.js"></script>
+    <script>if(Modernizr.touchevents) document.write('<script src="js/lib/hammer.min.js"><\/script>');</script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/lib/jquery.min.js"><\/script>')</script>
+    <script>window.jQuery || document.write('<script src="js/lib/jquery.1.11.3.min.js"><\/script>')</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
     <script>window.TweenMax || document.write('<script src="js/lib/TweenMax.min.js"><\/script>')</script>
 
 
-    <script src="js/optimized.0e6fc797c653813b1096.js"></script>
+    <script src="js/optimized.94c1936fb9d057abefe3.js"></script>
 
 </body>
 </html>

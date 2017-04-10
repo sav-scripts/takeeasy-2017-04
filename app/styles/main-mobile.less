@@ -182,7 +182,7 @@
             .percent-div(center-bubble, -280, -383, 582, 451, 'index-texture-2.m.png');
             .percent-div(text-1, -237, -316, 489, 27, 'index-text-1.m.png');
             .percent-div(text-2, -245, -266, 499, 160, 'index-text-2.m.png');
-            .percent-div(text-3, -157, -98, 326, 114, 'index-text-3.m.png');
+            .percent-div(text-3, -167, -88, 358, 104, 'index-text-3.m.png');
         }
 
         .percent-div(button-1, -229, 84, 130, 69, 'index-button-1.m.png');
@@ -213,6 +213,28 @@
         .percent-div(desc-1, -191, 164, 373, 152, 'reviewer-desc-1.m.png');
         .percent-div(pic-2, -248, -242, 500, 392, 'reviewer-pic-2.m.png');
         .percent-div(desc-2, -223, 168, 444, 147, 'reviewer-desc-2.m.png');
+
+
+
+        .arrow-left{
+            .abs-div(-300, -58, 38, 38);
+            .image-bg("entry-view-arrow-left.png");
+
+            cursor: pointer;
+            &:active{
+                margin-left: -3px;
+            }
+        }
+
+        .arrow-right{
+            .abs-div(268, -58, 38, 38);
+            .image-bg("entry-view-arrow-right.png");
+
+            cursor: pointer;
+            &:active{
+                margin-left: 3px;
+            }
+        }
     }
 
     /* participate */
@@ -386,21 +408,23 @@
                 width: 100px;
                 height: 100px;
 
-                .abs-div-2(item-1, -236, -217, 464, 347, "fill-filling-work-1.png");
-                .abs-div-2(item-2, -236, -217, 464, 347, "fill-filling-work-2.png");
-                .abs-div-2(item-3, -236, -217, 464, 347, "fill-filling-work-3.png");
-                .abs-div-2(item-4, -236, -217, 464, 347, "fill-filling-work-4.png");
+                .abs-div-2(item-1, -236, -217, 453, 395, "fill-item-1.m.png");
+                .abs-div-2(item-2, -236, -217, 453, 395, "fill-item-2.m.png");
+                .abs-div-2(item-3, -236, -217, 453, 395, "fill-item-3.m.png");
+                .abs-div-2(item-4, -236, -217, 453, 395, "fill-item-4.m.png");
 
                 .item-1, .item-2, .item-3, .item-4{
                     background-position-y: top;
                     background-repeat: no-repeat;
+
+                    border: 2px solid black;
 
                     transition: none;
 
                     &:hover{
                         cursor: pointer;
                         margin-top: 0;
-                        height: 347px;
+                        height: 395px;
                     }
                 }
             }

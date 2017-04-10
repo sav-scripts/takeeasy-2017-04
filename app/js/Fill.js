@@ -172,7 +172,14 @@
 
         self.resize();
 
-        _currentStep = _defaultStep;
+        if(Main.settings.viewport.index == 0)
+        {
+            _currentStep = 'filling';
+        }
+        else
+        {
+            _currentStep = _defaultStep;
+        }
 
         _stepDic[_currentStep].show(0, cb);
     }

@@ -74,8 +74,14 @@
                 //_keyword = $doms.keywordInput.val();
                 _keyword = parseInt($doms.keywordInput.val());
 
+
+
                 $doms.keywordInput.val('');
-                self.doSearch(0, true, null, true);
+
+                if(!PatternSamples.onlySpace.test(_keyword))
+                {
+                    self.doSearch(0, true, null, true);
+                }
             });
 
             $doms.btnSortByDate = $doms.container.find(".tab-by-date").on("click", function()

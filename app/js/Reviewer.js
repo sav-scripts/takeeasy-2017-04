@@ -4,6 +4,8 @@
         _isInit = false,
         _mobileGap = 495,
         _currentIndex = 1,
+        _numReviewers = 2,
+        _isLocking = false,
         _tl;
 
     var self = window.Reviewer =
@@ -58,6 +60,20 @@
         setupReviewer(1);
         setupReviewer(2);
 
+        $doms.arrowLeft = $doms.container.find(".arrow-left").on(_CLICK_, function()
+        {
+
+            var index = _currentIndex - 1;
+            if(index < 1) index = _numReviewers;
+            toIndex(index);
+        });
+
+        $doms.arrowRight = $doms.container.find(".arrow-right").on(_CLICK_, function()
+        {
+            var index = _currentIndex + 1;
+            if(index > _numReviewers) index = 1;
+            toIndex(index);
+        });
 
         function setupReviewer(index)
         {
@@ -126,6 +142,23 @@
                 TweenMax.set($desc, {marginLeft:0, scale:1});
             }
         }
+
+        updateArrows();
+    }
+
+    function updateArrows()
+    {
+        if(Main.settings.viewport.index == 0)
+        {
+            console.log(_currentIndex);
+            $doms.arrowLeft.toggleClass('hidding', (_currentIndex == 1));
+            $doms.arrowRight.toggleClass('hidding', (_currentIndex == _numReviewers));
+        }
+        else
+        {
+            $doms.arrowLeft.toggleClass('hidding', true);
+            $doms.arrowRight.toggleClass('hidding', true);
+        }
     }
 
     function toIndex(index)
@@ -133,6 +166,8 @@
         if(index == _currentIndex) return;
 
         _currentIndex = index;
+
+        updateArrows();
 
         var vp = Main.settings.viewport;
 
