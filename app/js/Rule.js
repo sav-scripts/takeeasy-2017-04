@@ -49,7 +49,11 @@
                 var containerHeight = $doms.contentContainer.height(),
                     containerWidth = $doms.contentContainer.width();
                 //var $ssContainer = $(_ss.doms.container);
-                _ss.containerSize(null, containerHeight).scrollBound(containerWidth+10, 3, 0, containerHeight-scrollBarSize).update(true);
+
+                var offsetX = vp.index == 0? 540: 990;
+
+                //_ss.containerSize(null, containerHeight).scrollBound(containerWidth+10, 3, 0, containerHeight-scrollBarSize).update(true);
+                _ss.containerSize(null, containerHeight).scrollBound(offsetX, 3, 0, containerHeight-scrollBarSize).update(true);
             }
 
         }

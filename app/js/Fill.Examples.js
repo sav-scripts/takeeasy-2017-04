@@ -24,6 +24,8 @@
     {
         isLocking: false,
 
+        isShown: false,
+
         init: function ($container)
         {
             $doms.container = $container;
@@ -136,6 +138,8 @@
         {
             if(!_isHiding) return;
             _isHiding = false;
+
+            this.isShown = true;
 
             $doms.parent.append($doms.container);
 

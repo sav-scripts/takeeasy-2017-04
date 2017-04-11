@@ -86,6 +86,24 @@
             "serial": "0322",
             "name": "John Tester",
             "thumb_url": "./images/entries-list-thumb-sample.png"
+        },
+        "get_filling_selections":
+        {
+            "error": "",
+            "selections":
+            [
+                "./images/fill-filling-work-1.png",
+                "./images/fill-filling-work-1.png",
+                "./images/fill-filling-work-1.png",
+                "./images/fill-filling-work-1.png"
+            ],
+            "authors":
+            [
+                "xxsdfafasfsadfsadfsadfdsax",
+                "xxx",
+                "xxx",
+                "xxx"
+            ]
         }
     };
 

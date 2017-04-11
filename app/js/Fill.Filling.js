@@ -31,6 +31,11 @@
             $doms.container = $container;
             $doms.parent = $container.parent();
 
+            $doms.btnToRule = $doms.container.find(".btn-to-rule").on(_CLICK_, function()
+            {
+                SceneHandler.toHash("/Rule");
+            });
+
             $doms.workContainer = $doms.container.find(".works");
 
             for(var i=1;i<=_numWorks;i++)
@@ -201,6 +206,11 @@
             tl.add(function ()
             {
                 if (cb) cb.apply();
+
+                if(!Fill.Examples.isShown)
+                {
+                    Fill.Examples.show();
+                }
             });
 
         },

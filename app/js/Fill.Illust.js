@@ -23,7 +23,9 @@
         textCtx: null,
         _oldInputText: '',
         _isOpen: false,
-        _defaultText: '請任選以下詞語來練肖話:有才、厭世、耍廢、正妹、鄉民、天真、生火、神人。',
+        _defaultText: '請任選其中一詞來練肖話：有才、厭世、耍廢、正妹、鄉民、天真、生火、神人。',
+        _hotTexts: '有才厭世耍廢正妹鄉民天真生火神人',
+        _hotTextDic: {},
 
         init: function(index, $container)
         {
@@ -38,15 +40,20 @@
             this.$image = $container.find(".raw-image");
             this.image = this.$image[0];
 
-            this.$input = $container.find(".input-field").on("input", function()
+            //this.$input = $container.find(".input-field").on("input", function()
+            //{
+            //    self.textToCanvas();
+            //    Fill.Filling.update();
+            //});
+
+            this.$input = $container.find(".input-field");
+            setupInput(this.$input);
+
+            for(var i=0;i<self._hotTexts.length;i++)
             {
-                //self.$input.val(text);
-                //self.$btnSend.toggleClass("disactivated", text.length == 0);
-                self.textToCanvas();
-
-                Fill.Filling.update();
-
-            });
+                var t = self._hotTexts[i];
+                self._hotTextDic[t] = true;
+            }
 
             this.$container.on('click', function(event)
             {
@@ -59,8 +66,47 @@
 
             this._oldInputText = this.$input.val();
 
-            this.$input.val('');
             self.textToCanvas();
+
+            function setupInput($dom)
+            {
+                $dom.defaultText = '字數限 30 字內';
+
+                $dom.on("focus", function()
+                {
+                    if($dom.val() == $dom.defaultText)
+                    {
+                        $dom.val("");
+                    }
+                    updateInputField();
+
+                }).on("blur", function()
+                {
+                    if($dom.val() == '')
+                    {
+                        $dom.val($dom.defaultText);
+                    }
+                    updateInputField();
+
+
+                }).on("input propertychange", function()
+                {
+                    self.textToCanvas();
+                    Fill.Filling.update();
+
+                    updateInputField();
+                });
+
+                $dom.val($dom.defaultText);
+
+                updateInputField();
+            }
+
+            function updateInputField()
+            {
+                var $dom = self.$input;
+                $dom.toggleClass("gray-mode", ($dom.val() == $dom.defaultText));
+            }
         },
 
         open: function()
@@ -104,7 +150,8 @@
 
         textToCanvas: function()
         {
-            var $textarea = this.$input;
+            var $textarea = this.$input,
+                self = this;
 
             if(!this.textCtx) this.createTextCanvas();
 
@@ -114,13 +161,14 @@
                 fontSize = parseInt(this.$textHolder.css("font-size")),
                 lineHeight = parseInt(this.$textHolder.css("line-height")),
                 fontFamily = $textarea.css("font-family"),
-                isHorizontalInput = true;
+                isHorizontalInput = true,
+                isHintMode = (text.length == 0 || text == $textarea.defaultText);
 
             //console.log(lineHeight);
 
-            if(text.length == 0)
+            if(isHintMode)
             {
-                this.textCtx.fillStyle = 'rgba(0,0,0,.3)';
+                this.textCtx.fillStyle = 'rgba(0,0,0,.7)';
                 text = this._defaultText;
             }
             else
@@ -193,7 +241,6 @@
 
             function printString(string, x, y)
             {
-                //console.log("printing: " + string + ", " + y);
                 ctx.fillText(string, x, y);
             }
         },
@@ -202,6 +249,7 @@
         {
             var text = this.$input.val();
             if(text === this._defaultText) text = '';
+            if(text == this.$input.defaultText) text = '';
             return text;
         },
 

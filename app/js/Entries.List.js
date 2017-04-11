@@ -379,15 +379,16 @@
                     else
                     {
                         var dataObj = response.data[0];
+
                         if(dataObj.status == 'approved')
                         {
                             EntryView.showEntry(dataObj);
                         }
-                        else if(dataObj.status = 'reviewing')
+                        else if(dataObj.status == 'reviewing')
                         {
                             Entries.Reviewing.show();
                         }
-                        else if(dataObj.status = 'unapproved')
+                        else if(dataObj.status == 'unapproved')
                         {
                             Entries.Unapproved.show();
                         }

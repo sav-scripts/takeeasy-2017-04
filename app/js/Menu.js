@@ -1,7 +1,8 @@
 (function(){
 
     var $doms = {},
-        _isOpen = false;
+        _isOpen = false,
+        _isInit = false;
 
     var self = window.Menu =
     {
@@ -11,6 +12,11 @@
             $doms.btnIcon = $doms.container.find('.icon').on(_CLICK_, function()
             {
                 _isOpen? self.close(): self.open();
+            });
+
+            $doms.cover = $doms.container.find(".cover").on(_CLICK_, function()
+            {
+                self.close();
             });
 
             $doms.buttonContainer = $doms.container.find(".button-container");
@@ -64,17 +70,19 @@
                 SceneHandler.toHash("/Rule");
             });
 
-            $doms.btnWinners = $doms.container.find(".btn:nth-child(7)").on(_CLICK_, function()
+            $doms.btnWinnerPost = $doms.container.find(".btn:nth-child(7)").on(_CLICK_, function()
             {
                 //self.close();
                 //SceneHandler.toHash("/Index");
             }).css('display', 'none');
 
-            $doms.btnShows = $doms.container.find(".btn:nth-child(8)").on(_CLICK_, function()
+            $doms.btnWinners = $doms.container.find(".btn:nth-child(8)").on(_CLICK_, function()
             {
-                //self.close();
-                //SceneHandler.toHash("/Index");
-            }).css('display', 'none');
+                self.close();
+                SceneHandler.toHash("/Winners");
+            });
+
+            _isInit = true;
         },
 
         open: function()
@@ -82,7 +90,10 @@
             if(_isOpen) return;
             _isOpen = true;
 
+            self.resize();
+
             $doms.buttonContainer.toggleClass("open-mode", true);
+            $doms.cover.toggleClass("open-mode", true);
         },
 
         close: function()
@@ -91,6 +102,17 @@
             _isOpen = false;
 
             $doms.buttonContainer.toggleClass("open-mode", false);
+            $doms.cover.toggleClass("open-mode", false);
+
+        },
+
+        resize: function()
+        {
+            if(_isInit)
+            {
+                var vp = Main.settings.viewport;
+                $doms.cover.css("height", vp.height);
+            }
 
         }
     };

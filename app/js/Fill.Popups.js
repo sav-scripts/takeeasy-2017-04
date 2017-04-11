@@ -30,7 +30,7 @@
                         link: Utility.getPath(),
                         picture: _shareImageUrl + "?v=" + new Date().getTime(),
                         title: "輕鬆小品 全台輕鬆練肖畫募集大賽！",
-                        description: '為紓解大眾生活壓力、促進國民身心健康、培養輕鬆幽默的處世態度，輕鬆小品邀你一起輕鬆練肖畫/話、輕鬆拿獎金，還有機會登上包裝供全民欣賞喔～'
+                        description: '為紓解生活壓力，培養輕鬆幽默的處世態度，輕鬆小品邀你一起輕鬆練肖畫/話、輕鬆拿獎金，還有機會登上包裝供全民欣賞喔~'
                     },function(response)
                     {
                         if(response && response.post_id)

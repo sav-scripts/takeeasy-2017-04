@@ -12,6 +12,8 @@
             $doms.container = $container;
             $doms.parent = $("body");
 
+            $doms.content = $doms.container.find(".content");
+
             $doms.btnClose = $doms.container.find(".btn-close").on("click", function()
             {
                 self.hide();
@@ -22,22 +24,27 @@
             {
 
                 //alert("_shareEntrySerial = " + _shareEntrySerial);
+
+                console.log(_shareImageUrl);
+
                 FB.ui
                 (
                     {
-                        method:"share",
+                        method:"feed",
                         display: "iframe",
                         href: Utility.getPath() + "?serial=" + _shareEntrySerial,
-                        title: CommonForm.getLastUserName() + "參加了輕鬆小品暑假打工爽的咧",
-                        description: '客倌們快來看看超有梗會笑出腹肌的爽畫作們啊～立即爽投票＋分享好友還有機會獲得7-11禮券＄200，多爽呀～～',
+                        title: CommonForm.getLastUserName() + " 在輕鬆小品 全台輕鬆練肖畫募集大賽 中投下了一票",
+                        description: '人客啊～快來一起看肖畫/話吧～立即投票還有機會獲得7-11禮券$200～',
+                        //picture: _shareImageUrl
                         picture: _shareImageUrl + "?v=" + new Date().getTime()
                     },function(response)
                     {
-                        if(!response.error && !response.error_code)
+                        console.log(JSON.stringify(response));
+
+                        if(response && response.post_id)
                         {
-                            alert('分享成功');
                             self.hide();
-                            Entries.toStep("list");
+                            Entries.ShareSuccess.show();
                         }
                     }
                 );
@@ -56,8 +63,10 @@
             if (delay === undefined) delay = 0;
 
             var tl = new TimelineMax;
-            tl.set($doms.container, {autoAlpha: 0, marginTop:50});
-            tl.to($doms.container, .4, {autoAlpha: 1, marginTop: 0}, delay);
+            tl.set($doms.container, {autoAlpha: 0});
+            tl.to($doms.container, .4, {autoAlpha: 1}, delay);
+            tl.set($doms.content, {marginTop: -30}, 0);
+            tl.to($doms.content,.4, {marginTop: -130}, delay);
             tl.add(function ()
             {
                 if (cb) cb.apply();
@@ -70,7 +79,7 @@
             _isHiding = true;
 
             var tl = new TimelineMax;
-            tl.to($doms.container, .4, {autoAlpha: 0}, delay);
+            tl.to($doms.container, .2, {autoAlpha: 0}, delay);
             tl.add(function ()
             {
                 $doms.container.detach();
@@ -92,6 +101,79 @@
 
 }());
 
+/* share-success */
+(function ()
+{
+    var $doms = {},
+        _isHiding = true;
+
+    var self = window.Entries.ShareSuccess =
+    {
+        init: function ($container)
+        {
+            $doms.container = $container;
+            $doms.parent = $("body");
+
+            $doms.content = $doms.container.find(".content");
+
+            $doms.btnClose = $doms.container.find(".btn-close").on("click", function()
+            {
+                self.hide();
+            });
+
+            $doms.btnToParticipate = $doms.container.find(".btn-to-participate").on("click", function()
+            {
+                self.hide();
+                SceneHandler.toHash("/Participate");
+            });
+
+            $doms.btnToFill = $doms.container.find(".btn-to-fill").on("click", function()
+            {
+                self.hide();
+                SceneHandler.toHash("/Fill");
+            });
+
+            $doms.container.detach();
+        },
+
+        show: function (delay, cb)
+        {
+            if(!_isHiding) return;
+            _isHiding = false;
+
+            $doms.parent.append($doms.container);
+
+            if (delay === undefined) delay = 0;
+
+            var tl = new TimelineMax;
+            tl.set($doms.container, {autoAlpha: 0});
+            tl.to($doms.container, .4, {autoAlpha: 1}, delay);
+            tl.set($doms.content, {marginTop: -30}, 0);
+            tl.to($doms.content,.4, {marginTop: -130}, delay);
+            tl.add(function ()
+            {
+                if (cb) cb.apply();
+            });
+
+        },
+        hide: function (delay, cb)
+        {
+            if(_isHiding) return;
+            _isHiding = true;
+
+            var tl = new TimelineMax;
+            tl.to($doms.container, .2, {autoAlpha: 0}, delay);
+            tl.add(function ()
+            {
+                $doms.container.detach();
+                if (cb) cb.apply();
+            });
+
+        }
+    };
+
+}());
+
 
 /* reviewing */
 
@@ -106,6 +188,8 @@
         {
             $doms.container = $container;
             $doms.parent = $("body");
+
+            $doms.content = $doms.container.find(".content");
 
             $doms.btnClose = $doms.container.find(".btn-close").on("click", function()
             {
@@ -131,8 +215,10 @@
             if (delay === undefined) delay = 0;
 
             var tl = new TimelineMax;
-            tl.set($doms.container, {autoAlpha: 0, marginTop:50});
-            tl.to($doms.container, .4, {autoAlpha: 1, marginTop: 0}, delay);
+            tl.set($doms.container, {autoAlpha: 0});
+            tl.to($doms.container, .4, {autoAlpha: 1}, delay);
+            tl.set($doms.content, {marginTop: -30}, 0);
+            tl.to($doms.content,.4, {marginTop: -130}, delay);
             tl.add(function ()
             {
                 if (cb) cb.apply();
@@ -145,7 +231,7 @@
             _isHiding = true;
 
             var tl = new TimelineMax;
-            tl.to($doms.container, .4, {autoAlpha: 0}, delay);
+            tl.to($doms.container, .2, {autoAlpha: 0}, delay);
             tl.add(function ()
             {
                 $doms.container.detach();
@@ -172,6 +258,8 @@
             $doms.container = $container;
             $doms.parent = $("body");
 
+            $doms.content = $doms.container.find(".content");
+
             $doms.btnClose = $doms.container.find(".btn-close").on("click", function()
             {
                 self.hide();
@@ -196,8 +284,10 @@
             if (delay === undefined) delay = 0;
 
             var tl = new TimelineMax;
-            tl.set($doms.container, {autoAlpha: 0, marginTop:50});
-            tl.to($doms.container, .4, {autoAlpha: 1, marginTop: 0}, delay);
+            tl.set($doms.container, {autoAlpha: 0});
+            tl.to($doms.container, .4, {autoAlpha: 1}, delay);
+            tl.set($doms.content, {marginTop: -30}, 0);
+            tl.to($doms.content,.4, {marginTop: -130}, delay);
             tl.add(function ()
             {
                 if (cb) cb.apply();
@@ -210,7 +300,7 @@
             _isHiding = true;
 
             var tl = new TimelineMax;
-            tl.to($doms.container, .4, {autoAlpha: 0}, delay);
+            tl.to($doms.container, .2, {autoAlpha: 0}, delay);
             tl.add(function ()
             {
                 $doms.container.detach();

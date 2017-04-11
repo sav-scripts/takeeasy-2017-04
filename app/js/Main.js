@@ -43,7 +43,8 @@
                 "/Rule",
                 "/Participate",
                 "/Entries",
-                "/Fill"
+                "/Fill",
+                "/Winners"
             ],
 
         firstHash: '',
@@ -358,12 +359,16 @@
             height = $(window).height();
 
         var obj = ScalableContent.updateView(width, height);
-        self.settings.viewport.changed = obj.modeChanged;
-        self.settings.viewport.index = obj.modeIndex;
+        var vp = self.settings.viewport;
+        vp.changed = obj.modeChanged;
+        vp.index = obj.modeIndex;
+        vp.width = width;
+        vp.height = height;
         //ScalableContent.updateResizeAble();
 
         if(SceneHandler.currentScene) SceneHandler.currentScene.resize();
         CommonForm.resize();
+        Menu.resize();
     }
 
 }());

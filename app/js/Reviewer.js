@@ -150,7 +150,6 @@
     {
         if(Main.settings.viewport.index == 0)
         {
-            console.log(_currentIndex);
             $doms.arrowLeft.toggleClass('hidding', (_currentIndex == 1));
             $doms.arrowRight.toggleClass('hidding', (_currentIndex == _numReviewers));
         }

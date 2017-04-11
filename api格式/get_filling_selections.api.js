@@ -22,5 +22,18 @@ var response =
         "http://xxx.xx/xxx.jpg",
         "http://xxx.xx/xxx.jpg",
         "http://xxx.xx/xxx.jpg"
-    ] // 從後台來的 10 筆精選肖話的圖
+    ],  // 從後台來的 10 筆精選肖話的圖
+    "authors":
+    [
+        "xxx",
+        "xxx",
+        "xxx",
+        "xxx",
+        "xxx",
+        "xxx",
+        "xxx",
+        "xxx",
+        "xxx",
+        "xxx"
+    ]  // 從後台來的 10 筆精選肖話的作者名稱
 };

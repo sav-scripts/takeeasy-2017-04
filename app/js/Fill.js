@@ -101,7 +101,7 @@
 
                 //Main.testCanvas(canvas);
 
-                return canvas;
+                return {canvas: canvas, illustCanvas: illustCanvas};
             }
             else
             {

@@ -213,13 +213,12 @@
             }
             else if(_currentMode == 'fill')
             {
-                canvas = Fill.getSendingCanvas();
+                var obj = Fill.getSendingCanvas();
 
-                if(canvas)
+                if(obj.canvas)
                 {
-                    imageData = canvas.toDataURL("image/jpeg", .95).replace(/^data:image\/jpeg;base64,/, "");
-
-                    formObj.image_data = imageData;
+                    formObj.image_data = obj.canvas.toDataURL("image/jpeg", .95).replace(/^data:image\/jpeg;base64,/, "");
+                    formObj.comic_data = obj.illustCanvas.toDataURL("image/jpeg", .95).replace(/^data:image\/jpeg;base64,/, "");
 
                     formObj.contents = Fill.getDescription();
                     formObj.illust_index = Fill.getIllustIndex();

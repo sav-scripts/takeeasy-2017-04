@@ -84,6 +84,7 @@
         self.Reviewing.init($("#entries-reviewing"));
         self.Unapproved.init($("#entries-unapproved"));
         self.VoteSuccess.init($("#entries-vote-success"));
+        self.ShareSuccess.init($("#entries-share-success"));
 
 
         $doms.container.detach();
