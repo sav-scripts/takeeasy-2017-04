@@ -37,15 +37,26 @@
         },
 
         hashArray:
-            [
-                "/Index",
-                "/Reviewer",
-                "/Rule",
-                "/Participate",
-                "/Entries",
-                "/Fill",
-                "/Winners"
-            ],
+        [
+            "/Index",
+            "/Reviewer",
+            "/Participate",
+            "/Fill",
+            "/Entries",
+            "/Rule",
+            "/Winners"
+        ],
+
+        hashGA:
+        {
+            "/Index": "首頁",
+            "/Reviewer": "評審介紹",
+            "/Participate": "練肖畫",
+            "/Fill": "練肖話",
+            "/Entries": "作品瀏覽",
+            "/Rule": "活動辦法",
+            "/Winners": "肖畫/話展"
+        },
 
         firstHash: '',
         defaultHash: '/Index',

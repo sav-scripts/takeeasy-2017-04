@@ -61,6 +61,8 @@
             {
                 if(_isLocking) return;
 
+                ga("send", "event", "作品瀏覽及投票 - 作品列表", "按鈕點擊", "搜尋名字");
+
                 _keyword = $doms.keywordInput.val();
                 //$doms.keywordInput.val('');
                 self.doSearch(0, true);
@@ -70,6 +72,8 @@
             $doms.btnSearchSerial = $doms.container.find(".btn-serial").on("click", function()
             {
                 if(_isLocking) return;
+
+                ga("send", "event", "作品瀏覽及投票 - 作品列表", "按鈕點擊", "搜尋編碼");
 
                 //_keyword = $doms.keywordInput.val();
                 _keyword = parseInt($doms.keywordInput.val());
@@ -88,12 +92,16 @@
             {
                 if(_isLocking) return;
 
+                ga("send", "event", "作品瀏覽及投票 - 作品列表", "頁籤點擊", "最新上架");
+
                 self.changeSortType("date");
             });
 
             $doms.btnSortByRank = $doms.container.find(".tab-by-rank").on("click", function()
             {
                 if(_isLocking) return;
+
+                ga("send", "event", "作品瀏覽及投票 - 作品列表", "頁籤點擊", "人氣排行");
 
                 self.changeSortType("votes");
             });
@@ -104,6 +112,8 @@
         {
             if (!_isHiding) return;
             _isHiding = false;
+
+            ga("send", "pageview", "作品瀏覽及投票 - 作品列表");
 
             Entries.Title.show();
 
@@ -439,6 +449,8 @@
 
             params.page_size = 1;
             params.page_index = entryIndex;
+
+            ga("send", "event", "作品瀏覽及投票 - 作品列表", "作品選擇", serial);
 
             EntryView.showEntryAt(params);
         });

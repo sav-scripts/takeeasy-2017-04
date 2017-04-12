@@ -58,11 +58,15 @@
 
             $doms.btnToList = $doms.container.find(".btn-to-list").on("click", function()
             {
+                ga('send', 'event', '作品瀏覽及投票 - 作品檢視', "按鈕點擊", '看其他畫作');
+
                 self.hide();
             });
 
             $doms.btnVote = $doms.container.find(".btn-vote").on("click", function()
             {
+                ga('send', 'event', '作品瀏覽及投票 - 作品檢視', "按鈕點擊", '投他一票');
+
                 self.hide();
                 //console.log("serial = " + _entryData.serial);
 
@@ -78,6 +82,8 @@
         },
         showPreview: function(canvas, description)
         {
+            ga('send', 'pageview', '練肖畫 - 作品預覽');
+
             $doms.imagePreview.empty();
             $doms.imagePreview.append(canvas);
 
@@ -88,6 +94,8 @@
         },
         showEntry: function(entryData, isMultipleMode)
         {
+            ga('send', 'pageview', '作品瀏覽及投票 - 作品檢視');
+
             _entryData = entryData;
 
 

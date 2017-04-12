@@ -28,10 +28,12 @@
                 {
                     if(Main.settings.viewport.index == 1)
                     {
+                        ga("send", "event", "練肖話 - 選擇配圖", "配圖點擊", index);
                         toFilling(index);
                     }
                     else if(_currentIndex == index)
                     {
+                        ga("send", "event", "練肖話 - 選擇配圖", "配圖點擊", index);
                         toFilling(index);
                     }
                     else
@@ -52,6 +54,8 @@
         {
             if(!_isHiding) return;
             _isHiding = false;
+
+            ga("send", "pageview", "練肖話 - 選擇配圖");
 
             $doms.parent.append($doms.container);
 

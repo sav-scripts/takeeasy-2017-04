@@ -44,6 +44,19 @@
             if(!_isHiding) return;
             _isHiding = false;
 
+            if(_currentMode == 'participate')
+            {
+                ga('send', 'pageview', '練肖畫 - 表單');
+            }
+            else if(_currentMode == 'fill')
+            {
+                ga('send', 'pageview', '練肖話 - 表單');
+            }
+            else if(_currentMode == 'vote')
+            {
+                ga('send', 'pageview', '作品瀏覽及投票 - 表單');
+            }
+
             $doms.parent.append($doms.container);
 
             self.resize();
@@ -147,7 +160,8 @@
 
             if(_currentMode == "participate")
             {
-                //Participate.Success.show();
+                ga('send', 'event', '練肖畫 - 表單', "按鈕點擊", '確認送出');
+
                 canvas = Participate.UploadStep.getRawCanvas();
 
                 if(canvas)
@@ -163,10 +177,12 @@
                     {
                         if(response.error)
                         {
+                            ga('send', 'event', '練肖畫 - 表單', "資料送出失敗", response.error);
                             alert(response.error);
                         }
                         else
                         {
+                            ga('send', 'event', '練肖畫 - 表單', "資料送出成功", response.serial);
                             Participate.Success.setShareEntrySerial(response.serial);
                             Participate.Success.show();
                         }
@@ -183,6 +199,8 @@
             }
             else if(_currentMode == 'vote')
             {
+                ga('send', 'event', '作品瀏覽及投票 - 表單', "按鈕點擊", '確認送出');
+
                 if(!_votingSerial)
                 {
                     alert('lack voting serial');
@@ -198,10 +216,12 @@
                     {
                         if(response.error)
                         {
+                            ga('send', 'event', '作品瀏覽及投票 - 表單', "資料送出失敗", response.error);
                             alert(response.error);
                         }
                         else
                         {
+                            ga('send', 'event', '作品瀏覽及投票 - 表單', "資料送出成功", _votingSerial);
                             Entries.VoteSuccess.setShareEntrySerial(_votingSerial);
                             Entries.VoteSuccess.setShareImageUrl(response.share_url);
                             Entries.VoteSuccess.show();
@@ -213,6 +233,8 @@
             }
             else if(_currentMode == 'fill')
             {
+                ga('send', 'event', '練肖話 - 表單', "按鈕點擊", '確認送出');
+
                 var obj = Fill.getSendingCanvas();
 
                 if(obj.canvas)
@@ -229,10 +251,14 @@
                     {
                         if(response.error)
                         {
+                            ga('send', 'event', '練肖話 - 表單', "資料送出失敗", response.error);
+
                             alert(response.error);
                         }
                         else
                         {
+                            ga('send', 'event', '練肖話 - 表單', "資料送出成功");
+
                             Fill.Success.setShareImageUrl(response.share_url);
                             Fill.Success.show();
                         }

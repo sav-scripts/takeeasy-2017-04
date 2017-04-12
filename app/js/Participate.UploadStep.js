@@ -81,6 +81,8 @@
             if(!_isHiding) return;
             _isHiding = false;
 
+            ga('send', 'pageview', '練肖畫 - 上傳畫作');
+
             $doms.parent.append($doms.container);
 
             update();

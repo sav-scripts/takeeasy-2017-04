@@ -141,6 +141,8 @@
 
             this.isShown = true;
 
+            ga("send", "pageview", "練肖話 - 範例");
+
             $doms.parent.append($doms.container);
 
             if (delay === undefined) delay = 0;

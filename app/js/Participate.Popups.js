@@ -20,6 +20,8 @@
 
             $doms.btnShare = $doms.container.find(".btn-share").on("click", function()
             {
+                ga('send', 'event', '練肖畫 - 投稿成功', "按鈕點擊", '立即發佈到Facebook');
+
                 FB.ui
                 (
                     {
@@ -30,6 +32,8 @@
                     {
                         if(response && response.post_id)
                         {
+                            ga('send', 'event', '練肖畫 - 投稿成功', "分享成功", response.post_id);
+
                             self.hide();
                             Participate.ShareSuccess.show();
                         }
@@ -45,6 +49,8 @@
         {
             if(!_isHiding) return;
             _isHiding = false;
+
+            ga('send', 'pageview', '練肖畫 - 投稿成功');
 
             $doms.parent.append($doms.container);
 
@@ -107,6 +113,8 @@
 
             $doms.btnToNext = $doms.container.find(".btn-to-next").on("click", function()
             {
+                ga('send', 'event', '練肖畫 - 分享成功', "按鈕點擊", '我要練肖話');
+
                 self.hide();
                 SceneHandler.toHash("/Fill");
             });
@@ -120,6 +128,8 @@
             _isHiding = false;
 
             $doms.parent.append($doms.container);
+
+            ga('send', 'pageview', '練肖畫 - 分享成功');
 
             if (delay === undefined) delay = 0;
 

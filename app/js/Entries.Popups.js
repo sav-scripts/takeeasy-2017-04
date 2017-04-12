@@ -22,27 +22,26 @@
 
             $doms.btnShare = $doms.container.find(".btn-share").on("click", function()
             {
-
-                //alert("_shareEntrySerial = " + _shareEntrySerial);
-
-                console.log(_shareImageUrl);
+                ga('send', 'event', '作品瀏覽及投票 - 投票成功', "按鈕點擊", '立即發佈到Facebook');
 
                 FB.ui
                 (
                     {
                         method:"feed",
                         display: "iframe",
-                        href: Utility.getPath() + "?serial=" + _shareEntrySerial,
+                        link: Utility.getPath() + "?serial=" + _shareEntrySerial,
                         title: CommonForm.getLastUserName() + " 在輕鬆小品 全台輕鬆練肖畫募集大賽 中投下了一票",
                         description: '人客啊～快來一起看肖畫/話吧～立即投票還有機會獲得7-11禮券$200～',
                         //picture: _shareImageUrl
                         picture: _shareImageUrl + "?v=" + new Date().getTime()
                     },function(response)
                     {
-                        console.log(JSON.stringify(response));
+                        //console.log(JSON.stringify(response));
 
                         if(response && response.post_id)
                         {
+                            ga('send', 'event', '作品瀏覽及投票 - 投票成功', "分享成功", response.post_id);
+
                             self.hide();
                             Entries.ShareSuccess.show();
                         }
@@ -57,6 +56,8 @@
         {
             if(!_isHiding) return;
             _isHiding = false;
+
+            ga('send', 'pageview', '作品瀏覽及投票 - 投票成功');
 
             $doms.parent.append($doms.container);
 
@@ -123,12 +124,16 @@
 
             $doms.btnToParticipate = $doms.container.find(".btn-to-participate").on("click", function()
             {
+                ga('send', 'event', '作品瀏覽及投票 - 分享成功', "按鈕點擊", '我要練肖畫');
+
                 self.hide();
                 SceneHandler.toHash("/Participate");
             });
 
             $doms.btnToFill = $doms.container.find(".btn-to-fill").on("click", function()
             {
+                ga('send', 'event', '作品瀏覽及投票 - 分享成功', "按鈕點擊", '我要練肖話');
+
                 self.hide();
                 SceneHandler.toHash("/Fill");
             });
@@ -140,6 +145,8 @@
         {
             if(!_isHiding) return;
             _isHiding = false;
+
+            ga('send', 'pageview', '作品瀏覽及投票 - 分享成功');
 
             $doms.parent.append($doms.container);
 
@@ -198,8 +205,9 @@
 
             $doms.btnEntries = $doms.container.find(".btn-entries").on("click", function()
             {
-                self.hide();
+                ga('send', 'event', '作品瀏覽及投票 - 審核中', "按鈕點擊", '作品瀏覽');
 
+                self.hide();
             });
 
             $doms.container.detach();
@@ -209,6 +217,8 @@
         {
             if(!_isHiding) return;
             _isHiding = false;
+
+            ga('send', 'pageview', '作品瀏覽及投票 - 審核中');
 
             $doms.parent.append($doms.container);
 
@@ -267,8 +277,9 @@
 
             $doms.btnEntries = $doms.container.find(".btn-entries").on("click", function()
             {
-                self.hide();
+                ga('send', 'event', '作品瀏覽及投票 - 沒有通過審核', "按鈕點擊", '作品瀏覽');
 
+                self.hide();
             });
 
             $doms.container.detach();
@@ -278,6 +289,8 @@
         {
             if(!_isHiding) return;
             _isHiding = false;
+
+            ga('send', 'pageview', '作品瀏覽及投票 - 沒有通過審核');
 
             $doms.parent.append($doms.container);
 

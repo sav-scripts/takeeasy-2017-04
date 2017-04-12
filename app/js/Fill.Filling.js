@@ -58,12 +58,14 @@
 
             $doms.btnToSample = $doms.container.find(".btn-to-sample").on(_CLICK_, function()
             {
+                ga("send", "event", "練肖話 - 輸入畫面", "按鈕點擊", "看範例");
+
                 Fill.Examples.show();
             });
 
             $doms.btnSend = $doms.container.find(".btn-send").on("click", function()
             {
-                //Fill.toStep("form");
+                ga("send", "event", "練肖話 - 輸入畫面", "按鈕點擊", "完成送出");
 
                 if(!_isFillReady)
                 {
@@ -195,6 +197,8 @@
         {
             if(!_isHiding) return;
             _isHiding = false;
+
+            ga("send", "pageview", "練肖話 - 輸入畫面");
 
             $doms.parent.append($doms.container);
 

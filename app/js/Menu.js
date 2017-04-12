@@ -24,18 +24,24 @@
 
             $doms.btnIndex = $doms.container.find(".btn:nth-child(1)").on(_CLICK_, function()
             {
+                ga("send", "event", "選單", "按鈕點擊", "首頁");
+
                 self.close();
                 SceneHandler.toHash("/Index");
             });
 
             $doms.btnReviewer = $doms.container.find(".btn:nth-child(2)").on(_CLICK_, function()
             {
+                ga("send", "event", "選單", "按鈕點擊", "評審介紹");
+
                 self.close();
                 SceneHandler.toHash("/Reviewer");
             });
 
             $doms.btnParticipate = $doms.container.find(".btn:nth-child(3)").on(_CLICK_, function()
             {
+                ga("send", "event", "選單", "按鈕點擊", "我要練肖畫");
+
                 self.close();
 
                 Main.loginFB("/Participate", function()
@@ -46,6 +52,8 @@
 
             $doms.btnFill = $doms.container.find(".btn:nth-child(4)").on(_CLICK_, function()
             {
+                ga("send", "event", "選單", "按鈕點擊", "我要練肖話");
+
                 self.close();
 
                 Main.loginFB("/Fill", function()
@@ -56,6 +64,8 @@
 
             $doms.btnEntries = $doms.container.find(".btn:nth-child(5)").on(_CLICK_, function()
             {
+                ga("send", "event", "選單", "按鈕點擊", "作品瀏覽及投票");
+
                 self.close();
 
                 Main.loginFB("/Entries", function()
@@ -66,18 +76,24 @@
 
             $doms.btnRule = $doms.container.find(".btn:nth-child(6)").on(_CLICK_, function()
             {
+                ga("send", "event", "選單", "按鈕點擊", "活動辦法");
+
                 self.close();
                 SceneHandler.toHash("/Rule");
             });
 
             $doms.btnWinnerPost = $doms.container.find(".btn:nth-child(7)").on(_CLICK_, function()
             {
+                ga("send", "event", "選單", "按鈕點擊", "得獎名單");
+
                 //self.close();
                 //SceneHandler.toHash("/Index");
             }).css('display', 'none');
 
             $doms.btnWinners = $doms.container.find(".btn:nth-child(8)").on(_CLICK_, function()
             {
+                ga("send", "event", "選單", "按鈕點擊", "肖畫展/肖話展");
+
                 self.close();
                 SceneHandler.toHash("/Winners");
             });

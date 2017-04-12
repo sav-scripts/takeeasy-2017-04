@@ -206,6 +206,8 @@
 
         self.resize();
 
+        ga('send', 'pageview', '評審介紹');
+
         var tl = new TimelineMax;
         tl.set($doms.container, {autoAlpha: 0});
         tl.to($doms.container, .4, {autoAlpha: 1});

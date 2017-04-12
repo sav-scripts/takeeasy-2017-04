@@ -52,6 +52,8 @@
 
         $doms.btnParticipate = $doms.container.find(".button-1").on(_CLICK_, function()
         {
+            ga("send", "event", "首頁", "點擊按鈕", "練肖畫");
+
             Main.loginFB("/Participate", function()
             {
                 SceneHandler.toHash("/Participate");
@@ -60,6 +62,8 @@
 
         $doms.btnFill = $doms.container.find(".button-2").on(_CLICK_, function()
         {
+            ga("send", "event", "首頁", "點擊按鈕", "練肖話");
+
             Main.loginFB("/Entries", function()
             {
             SceneHandler.toHash("/Fill");
@@ -68,6 +72,8 @@
 
         $doms.btnVote = $doms.container.find(".button-3").on(_CLICK_, function()
         {
+            ga("send", "event", "首頁", "點擊按鈕", "投票");
+
             Main.loginFB("/Entries", function()
             {
                 SceneHandler.toHash("/Entries");
@@ -184,6 +190,8 @@
     function show(cb)
     {
         $("#scene-container").append($doms.container);
+
+        ga('send', 'pageview', '首頁');
 
         self.resize();
 
